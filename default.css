@@ -1,0 +1,46 @@
+
+
+:root {
+    --cool-steel: #8da7be;
+    --ash-brown: #554640;
+    --pale-sky: #cde6f5;
+    --cool-steel-2: #87919e;
+    --dim-grey: #707078;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--pale-sky);
+    color: var(--ash-brown);
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+a {
+    color: var(--ash-brown);
+}
+
+button {
+    background: var(--ash-brown);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+img {
+    max-width: 100%;
+}
+```
