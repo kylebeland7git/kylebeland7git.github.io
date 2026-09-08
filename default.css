@@ -22,6 +22,7 @@ body {
 
 h1, h2, h3 {
     margin-bottom: 10px;
+    text-align: center;
 }
 
 p {
@@ -43,4 +44,4 @@ button {
 img {
     max-width: 100%;
 }
-```
+
