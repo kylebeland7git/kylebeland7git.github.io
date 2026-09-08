@@ -1,0 +1,47 @@
+:root {
+    --amethyst-smoke: #a393bf;
+    --amethyst-smoke-2: #9882ac;
+    --vintage-lavender: #73648a;
+    --vintage-grape: #453750;
+    --onyx: #0c0910;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--amethyst-smoke);
+    color: var(--onyx);
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 20px;
+    color: var(--vintage-grape);
+}
+
+p {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+a {
+    color: var(--vintage-grape);
+}
+
+button {
+    background: var(--vintage-grape);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+img {
+    max-width: 100%;
+}
