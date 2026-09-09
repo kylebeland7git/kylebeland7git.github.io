@@ -32,23 +32,42 @@ p {
 
 a {
     color: var(--vintage-grape);
+    text-align: center;
 }
 
 img {
+    width: 300px;
     max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 header,
 footer {
     background-color: var(--vintage-lavender);
+
 }
 
-header h1, h2, h3 {
+header h1{
     color: var(--amethyst-smoke-2);
+}
+
+header h2{
+    color: var(--amethyst-smoke-2);
+}
+
+header h3{
+    color: var(--amethyst-smoke-2);
+}
+
+footer {
+    background-color: var(--vintage-lavender);
+    text-align: center;
 }
 
 footer a {
     color: var(--amethyst-smoke-2);
+    display: inline-block;
 }
 
 footer p {
