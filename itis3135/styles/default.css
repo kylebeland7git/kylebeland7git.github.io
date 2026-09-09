@@ -34,14 +34,27 @@ a {
     color: var(--vintage-grape);
 }
 
-button {
-    background: var(--vintage-grape);
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-}
 
 img {
     max-width: 100%;
+}
+
+header {
+    background-color: #73648a;
+}
+
+header h1, h2, h3{
+    color: #9882ac;
+}
+
+footer {
+    background-color: #73648a;
+}
+
+footer a{
+    color: #9882ac;
+}
+
+footer p{
+    background-color: #9882ac;
 }
