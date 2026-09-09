@@ -20,8 +20,8 @@ body {
 
 h1, h2, h3 {
     margin-bottom: 10px;
-    text-align: center;
     padding: 20px;
+    text-align: center;
     color: var(--vintage-grape);
 }
 
@@ -34,27 +34,22 @@ a {
     color: var(--vintage-grape);
 }
 
-
 img {
     max-width: 100%;
 }
 
-header {
-    background-color: #73648a;
-}
-
-header h1, h2, h3{
-    color: #9882ac;
-}
-
+header,
 footer {
-    background-color: #73648a;
+    background-color: var(--vintage-lavender);
 }
 
-footer a{
-    color: #9882ac;
+header h1,
+header h2,
+header h3,
+footer a {
+    color: var(--amethyst-smoke-2);
 }
 
-footer p{
-    background-color: #9882ac;
+footer p {
+    background-color: var(--amethyst-smoke-2);
 }
