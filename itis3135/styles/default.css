@@ -43,13 +43,14 @@ footer {
     background-color: var(--vintage-lavender);
 }
 
-header h1,
-header h2,
-header h3,
+header h1, h2, h3 {
+    color: var(--amethyst-smoke-2);
+}
+
 footer a {
     color: var(--amethyst-smoke-2);
 }
 
 footer p {
-    background-color: var(--amethyst-smoke-2);
+    color: var(--amethyst-smoke-2);
 }
