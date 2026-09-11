@@ -40,8 +40,7 @@ img {
     width: 300px;
     max-width: 100%;
     display: block;
-    margin: 5 auto;
-
+    margin: 0 auto 5px;
 }
 
 header,
