@@ -26,14 +26,13 @@ h1, h2, h3 {
 }
 
 p {
-    margin-bottom: 10px;
-    margin-left: 200px;
+    margin: 10px auto;
     padding: 10px;
+    max-width: 800px;
 }
 
 a {
     color: var(--vintage-grape);
-    text-align: center;
 }
 
 img {
@@ -46,24 +45,13 @@ img {
 header,
 footer {
     background-color: var(--vintage-lavender);
-
-}
-
-header h1{
-    color: var(--amethyst-smoke-2);
-}
-
-header h2{
-    color: var(--amethyst-smoke-2);
-}
-
-header h3{
-    color: var(--amethyst-smoke-2);
-}
-
-footer {
-    background-color: var(--vintage-lavender);
     text-align: center;
+}
+
+header h1,
+header h2,
+header h3 {
+    color: var(--amethyst-smoke-2);
 }
 
 footer a {
@@ -76,16 +64,9 @@ footer p {
 }
 
 .introduction p {
-    margin-left: 30px;
+    margin: 10px auto;
 }
-.introduction blockquote{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-.introduction ul, li {
-    margin-left: 90px;
-}
+
 .introduction figure {
     text-align: center;
 }
@@ -93,4 +74,19 @@ footer p {
 .introduction figcaption {
     text-align: center;
     font-style: italic;
+}
+
+ul {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+li {
+    margin: 10px 0;
+}
+
+.introduction blockquote {
+    margin: 30px auto;
+    text-align: center;
 }
