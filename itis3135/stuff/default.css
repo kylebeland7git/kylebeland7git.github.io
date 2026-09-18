@@ -1,0 +1,52 @@
+body {
+    background-color: white;
+}
+
+header {
+    background-color: white;
+}
+
+main {
+    background-color: white;
+}
+
+h1 {
+    color: black;
+}
+
+h2 {
+    color: black;
+}
+
+h3 {
+    color: black;
+}
+
+p {
+    color: black;
+}
+
+.large {
+    color: black;
+    font-size: 50px;
+}
+
+ul {
+    color: black;
+    text-align: center;
+    margin: 20px;
+}
+
+li {
+    color: black;
+    text-align: center;
+}
+
+footer {
+    background-color: white;
+}
+
+img {
+    width: 300px;
+    height: 400px;
+}
