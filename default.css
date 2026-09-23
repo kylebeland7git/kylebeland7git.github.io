@@ -19,13 +19,23 @@ body {
     color: var(--ash-brown);
 }
 
-h1, h2, h3 {
-    margin-bottom: 5px;
-    text-align: center;
+h1 {
     width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 10px;
+    text-align: center;
     border-bottom: 3px solid var(--cool-steel-2);
+}
+
+h2 {
+    width: 50%;
+    margin: 20px auto 8px;
+    text-align: center;
+}
+
+h3 {
+    width: 40%;
+    margin: 15px auto 5px;
+    text-align: center;
 }
 
 p {

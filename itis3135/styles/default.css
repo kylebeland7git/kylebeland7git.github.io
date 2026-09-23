@@ -48,8 +48,14 @@ footer {
     text-align: center;
 }
 
-header h1,
-header h2,
+header h1 {
+    color: var(--amethyst-smoke-2);
+}
+
+header h2 {
+    color: var(--amethyst-smoke-2);
+}
+
 header h3 {
     color: var(--amethyst-smoke-2);
 }
