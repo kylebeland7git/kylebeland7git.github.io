@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle's Hockey Hobby</title>
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            --sand: #bfb48f;
+            --taupe-grey: #564e58;
+            --burnt-rose: #904e55;
+            --parchment: #f2efe9;
+            --carbon-black: #252627;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: auto;
+            max-width: 1200px;
+            background-color: var(--sand);
+            color: var(--carbon-black);
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--parchment);
+            padding: 25px;
+            text-align: center;
+            border-bottom: 6px solid var(--burnt-rose);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            color: var(--taupe-grey);
+        }
+
+        h1 {
+            margin: 0 0 15px;
+            font-size: 2.7rem;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 2rem;
+            border-bottom: 3px solid var(--burnt-rose);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        nav button {
+            background-color: var(--taupe-grey);
+            color: var(--parchment);
+            border: 2px solid var(--taupe-grey);
+            padding: 9px 14px;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav button:hover,
+        nav button:focus {
+            background-color: var(--burnt-rose);
+            border-color: var(--burnt-rose);
+        }
+
+        nav button.active {
+            background-color: var(--burnt-rose);
+            border-color: var(--burnt-rose);
+        }
+
+        main {
+            background-color: var(--parchment);
+            margin: 25px 0;
+            padding: 30px;
+            border-left: 6px solid var(--burnt-rose);
+            border-right: 6px solid var(--burnt-rose);
+        }
+
+        section {
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        .intro {
+            font-size: 1.15rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background-color: var(--sand);
+            padding: 20px;
+            border: 3px solid var(--taupe-grey);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        figure {
+            margin: 25px 0;
+            padding: 15px;
+            background-color: var(--sand);
+            border: 3px solid var(--burnt-rose);
+            text-align: center;
+        }
+
+        figure img {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-weight: bold;
+            color: var(--taupe-grey);
+        }
+
+        figure p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .facts {
+            padding-left: 25px;
+        }
+
+        .facts li {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            border: 2px solid var(--taupe-grey);
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--taupe-grey);
+            color: var(--parchment);
+        }
+
+        td {
+            background-color: var(--sand);
+        }
+
+        a {
+            color: var(--burnt-rose);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:focus {
+            color: var(--taupe-grey);
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: var(--taupe-grey);
+            color: var(--parchment);
+            padding: 25px;
+            text-align: center;
+            border-top: 6px solid var(--burnt-rose);
+        }
+
+        footer a {
+            color: var(--parchment);
+        }
+
+        footer a:hover,
+        footer a:focus {
+            color: var(--sand);
+        }
+
+        .footer-links {
+            margin-bottom: 15px;
+        }
+
+        .footer-links span {
+            margin: 0 5px;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                width: 95%;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header,
+            main,
+            footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2.1rem;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav button {
+                width: 100%;
+            }
+
+            figure img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Kyle's Hockey Hobby</h1>
+
+        <nav aria-label="Hockey hobby sections">
+            <button type="button" data-section="what" class="active">What</button>
+            <span aria-hidden="true">◆</span>
+            <button type="button" data-section="who">Who</button>
+            <span aria-hidden="true">◆</span>
+            <button type="button" data-section="when">When</button>
+            <span aria-hidden="true">◆</span>
+            <button type="button" data-section="where">Where</button>
+            <span aria-hidden="true">◆</span>
+            <button type="button" data-section="how">How</button>
+            <span aria-hidden="true">◆</span>
+            <button type="button" data-section="why">Why</button>
+            <span aria-hidden="true">◆</span>
+            <button type="button" data-section="ai-prompts">AI Prompts</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="what" class="active">
+            <h2>What</h2>
+
+            <p class="intro">
+                Hockey is a fast-paced team sport played on ice. Players use
+                sticks to move a puck across the rink while attempting to score
+                goals against the opposing team.
+            </p>
+
+            <div class="content-grid">
+                <article class="card">
+                    <h3>The Game</h3>
+                    <p>
+                        Hockey is played by two teams that compete to score
+                        more goals than their opponent. Speed, teamwork,
+                        passing, shooting, and defensive play are important
+                        parts of the game.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>The Equipment</h3>
+                    <p>
+                        Players typically use skates, a hockey stick, a helmet,
+                        gloves, shoulder protection, elbow protection, shin
+                        guards, and other protective equipment.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>The Objective</h3>
+                    <p>
+                        The main objective is to put the puck into the other
+                        team's net while preventing the opposing team from
+                        scoring.
+                    </p>
+                </article>
+            </div>
+
+            <figure>
+                <img src="images/hockey-game.jpg"
+                     alt="Hockey players competing on an ice rink">
+                <figcaption>Hockey is a fast and team-oriented sport.</figcaption>
+                <p>
+                    <em>
+                        AI prompt used for this image: "Create a photorealistic
+                        image of hockey players competing during an indoor
+                        ice hockey game."
+                    </em>
+                </p>
+            </figure>
+        </section>
+
+        <section id="who">
+            <h2>Who</h2>
+
+            <p class="intro">
+                My interest in hockey comes from enjoying the combination of
+                athleticism, competition, teamwork, and the fast pace of the
+                sport.
+            </p>
+
+            <div class="content-grid">
+                <article class="card">
+                    <h3>Players</h3>
+                    <p>
+                        Hockey players need skating ability, coordination,
+                        awareness, and communication to contribute effectively
+                        to their team.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Teams</h3>
+                    <p>
+                        Hockey teams are made up of forwards, defensemen, and
+                        goaltenders. Each position has a different role during
+                        a game.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Fans</h3>
+                    <p>
+                        Fans add another part of the hockey experience by
+                        attending games, following teams, learning statistics,
+                        and supporting their favorite players.
+                    </p>
+                </article>
+            </div>
+
+            <figure>
+                <img src="images/hockey-player.jpg"
+                     alt="Hockey player preparing for a faceoff">
+                <figcaption>A hockey player ready for the next play.</figcaption>
+                <p>
+                    <em>
+                        AI prompt used for this image: "Create a photorealistic
+                        image of an ice hockey player standing on the ice
+                        before a faceoff."
+                    </em>
+                </p>
+            </figure>
+        </section>
+
+        <section id="when">
+            <h2>When</h2>
+
+            <p class="intro">
+                Hockey can be enjoyed throughout the year, but organized
+                leagues generally follow specific seasons and schedules.
+            </p>
+
+            <div class="content-grid">
+                <article class="card">
+                    <h3>Regular Season</h3>
+                    <p>
+                        Professional hockey teams play their regular-season
+                        games during the colder months of the year.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Playoffs</h3>
+                    <p>
+                        After the regular season, qualifying teams compete in
+                        playoff rounds to determine the league champion.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Offseason</h3>
+                    <p>
+                        The offseason is useful for training, practicing
+                        skills, following player movement, and preparing for
+                        the next season.
+                    </p>
+                </article>
+            </div>
+
+            <table>
+                <caption>Example Hockey Activity Schedule</caption>
+                <thead>
+                    <tr>
+                        <th>Activity</th>
+                        <th>Typical Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Watch a Game</td>
+                        <td>Evening</td>
+                    </tr>
+                    <tr>
+                        <td>Practice</td>
+                        <td>Afternoon or Evening</td>
+                    </tr>
+                    <tr>
+                        <td>Follow Hockey News</td>
+                        <td>Any Time</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <figure>
+                <img src="images/hockey-calendar.jpg"
+                     alt="Hockey schedule displayed beside hockey equipment">
+                <figcaption>Keeping track of hockey games and activities.</figcaption>
+                <p>
+                    <em>
+                        AI prompt used for this image: "Create a photorealistic
+                        hockey-themed calendar with an ice rink, hockey stick,
+                        and game schedule."
+                    </em>
+                </p>
+            </figure>
+        </section>
+
+        <section id="where">
+            <h2>Where</h2>
+
+            <p class="intro">
+                Hockey can be enjoyed at professional arenas, community ice
+                rinks, college facilities, and recreational leagues.
+            </p>
+
+            <div class="content-grid">
+                <article class="card">
+                    <h3>Arenas</h3>
+                    <p>
+                        Professional hockey is played in large arenas designed
+                        to hold thousands of fans and provide an exciting
+                        game-day atmosphere.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Local Rinks</h3>
+                    <p>
+                        Community ice rinks provide opportunities for people
+                        to learn skating, join recreational leagues, and
+                        practice hockey.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>College Hockey</h3>
+                    <p>
+                        College hockey gives fans another opportunity to watch
+                        competitive hockey while supporting their school and
+                        local teams.
+                    </p>
+                </article>
+            </div>
+
+            <figure>
+                <img src="images/hockey-rink.jpg"
+                     alt="Ice hockey rink prepared for a game">
+                <figcaption>An ice rink prepared for hockey.</figcaption>
+                <p>
+                    <em>
+                        AI prompt used for this image: "Create a photorealistic
+                        indoor ice hockey rink prepared for a competitive game,
+                        viewed from the stands."
+                    </em>
+                </p>
+            </figure>
+        </section>
+
+        <section id="how">
+            <h2>How</h2>
+
+            <p class="intro">
+                Getting involved with hockey starts with learning how to skate,
+                understanding the basic rules, and becoming comfortable with
+                hockey equipment.
+            </p>
+
+            <div class="content-grid">
+                <article class="card">
+                    <h3>Learn to Skate</h3>
+                    <p>
+                        Strong skating skills provide the foundation for
+                        hockey. Balance, stopping, turning, and acceleration
+                        are important skills to practice.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Learn the Rules</h3>
+                    <p>
+                        Understanding offsides, icing, penalties, faceoffs,
+                        and basic positioning makes watching and playing the
+                        game easier.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Practice Skills</h3>
+                    <p>
+                        Players can improve by practicing stickhandling,
+                        passing, shooting, skating, and positioning on a
+                        regular basis.
+                    </p>
+                </article>
+            </div>
+
+            <ul class="facts">
+                <li>Practice skating and stopping.</li>
+                <li>Learn basic puck control.</li>
+                <li>Practice passing and shooting.</li>
+            </ul>
+
+            <figure>
+                <img src="images/hockey-practice.jpg"
+                     alt="Hockey player practicing with a puck">
+                <figcaption>Practice is an important part of improving hockey skills.</figcaption>
+                <p>
+                    <em>
+                        AI prompt used for this image: "Create a photorealistic
+                        image of a hockey player practicing stickhandling on
+                        an indoor ice rink."
+                    </em>
+                </p>
+            </figure>
+        </section>
+
+        <section id="why">
+            <h2>Why</h2>
+
+            <p class="intro">
+                Hockey is a hobby I enjoy because it combines competition,
+                athleticism, teamwork, and entertainment into one sport.
+            </p>
+
+            <div class="content-grid">
+                <article class="card">
+                    <h3>Competition</h3>
+                    <p>
+                        The competitive nature of hockey makes every shift,
+                        play, and scoring opportunity meaningful.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Teamwork</h3>
+                    <p>
+                        Players have to communicate and work together because
+                        no single player can control an entire hockey game.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Excitement</h3>
+                    <p>
+                        The speed of skating, physical play, scoring chances,
+                        and quick changes in momentum make hockey exciting to
+                        watch.
+                    </p>
+                </article>
+            </div>
+
+            <figure>
+                <img src="images/hockey-fans.jpg"
+                     alt="Hockey fans watching a game">
+                <figcaption>Hockey brings players and fans together.</figcaption>
+                <p>
+                    <em>
+                        AI prompt used for this image: "Create a photorealistic
+                        image of enthusiastic hockey fans watching a close
+                        hockey game from the stands."
+                    </em>
+                </p>
+            </figure>
+        </section>
+
+        <section id="ai-prompts">
+            <h2>AI Prompts</h2>
+
+            <p class="intro">
+                AI was used to help develop parts of this hobby website,
+                including planning, writing, and generating visual concepts.
+            </p>
+
+            <div class="content-grid">
+                <article class="card">
+                    <h3>Planning Prompt</h3>
+                    <p>
+                        "Help me create a multi-page-style hobby website about
+                        hockey that follows CRAP design principles."
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Writing Prompt</h3>
+                    <p>
+                        "Write short informational content explaining what
+                        hockey is, when it is played, where it can be enjoyed,
+                        and why someone might enjoy the sport."
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Image Prompt</h3>
+                    <p>
+                        "Create photorealistic hockey images with a consistent
+                        visual style for a personal hockey hobby website."
+                    </p>
+                </article>
+            </div>
+
+            <figure>
+                <img src="images/ai-hockey.jpg"
+                     alt="Stylized hockey scene representing artificial intelligence">
+                <figcaption>AI-assisted design and content creation.</figcaption>
+                <p>
+                    <em>
+                        AI prompt used for this image: "Create a photorealistic
+                        hockey scene that represents the use of artificial
+                        intelligence in creating a personal hobby website."
+                    </em>
+                </p>
+            </figure>
+
+            <p>
+                AI was used as a development and brainstorming tool. The final
+                website was reviewed and organized to meet the assignment
+                requirements.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://validator.w3.org/">HTML Validation</a>
+            <span aria-hidden="true">◆</span>
+            <a href="https://jigsaw.w3.org/css-validator/">CSS Validation</a>
+            <span aria-hidden="true">◆</span>
+            <a href="https://wave.webaim.org/">Accessibility</a>
+            <span aria-hidden="true">◆</span>
+            <a href="https://kylebkillabdesign.com/">Kylebdesign</a>
+        </div>
+
+        <p>
+            Designed by
+            <a href="https://kylebkillabdesign.com/">Kylebdesign</a>
+        </p>
+    </footer>
+
+
+
+</body>
+</html>
+
+
