@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,6 +46,17 @@
             color: var(--taupe-grey);
         }
 
+        h1 a {
+            color: var(--taupe-grey);
+            text-decoration: none;
+        }
+
+        h1 a:hover,
+        h1 a:focus {
+            color: var(--burnt-rose);
+            text-decoration: none;
+        }
+
         h2 {
             margin-top: 0;
             font-size: 2rem;
@@ -69,7 +79,7 @@
             gap: 8px;
         }
 
-        nav button {
+        nav a {
             background-color: var(--taupe-grey);
             color: var(--parchment);
             border: 2px solid var(--taupe-grey);
@@ -77,18 +87,15 @@
             font-family: "Trebuchet MS", Arial, sans-serif;
             font-size: 1rem;
             font-weight: bold;
-            cursor: pointer;
+            text-decoration: none;
         }
 
-        nav button:hover,
-        nav button:focus {
+        nav a:hover,
+        nav a:focus {
             background-color: var(--burnt-rose);
             border-color: var(--burnt-rose);
-        }
-
-        nav button.active {
-            background-color: var(--burnt-rose);
-            border-color: var(--burnt-rose);
+            color: var(--parchment);
+            text-decoration: none;
         }
 
         main {
@@ -103,8 +110,16 @@
             display: none;
         }
 
-        section.active {
+        section:target {
             display: block;
+        }
+
+        main > section:first-child {
+            display: block;
+        }
+
+        main:has(section:target) > section:first-child {
+            display: none;
         }
 
         .intro {
@@ -245,7 +260,7 @@
                 flex-direction: column;
             }
 
-            nav button {
+            nav a {
                 width: 100%;
             }
 
@@ -259,28 +274,28 @@
 <body>
 
     <header>
-        <h1>Ice Hockey</h1>
+        <h1><a href="#">Ice Hockey</a></h1>
 
         <nav aria-label="Hockey hobby sections">
-            <button type="button" data-section="what" class="active">What</button>
+            <a href="#">What</a>
             <span aria-hidden="true">◆</span>
-            <button type="button" data-section="who">Who</button>
+            <a href="#who">Who</a>
             <span aria-hidden="true">◆</span>
-            <button type="button" data-section="when">When</button>
+            <a href="#when">When</a>
             <span aria-hidden="true">◆</span>
-            <button type="button" data-section="where">Where</button>
+            <a href="#where">Where</a>
             <span aria-hidden="true">◆</span>
-            <button type="button" data-section="how">How</button>
+            <a href="#how">How</a>
             <span aria-hidden="true">◆</span>
-            <button type="button" data-section="why">Why</button>
+            <a href="#why">Why</a>
             <span aria-hidden="true">◆</span>
-            <button type="button" data-section="ai-prompts">AI Prompts</button>
+            <a href="#ai-prompts">AI Prompts</a>
         </nav>
     </header>
 
     <main>
 
-        <section id="what" class="active">
+        <section id="what">
             <h2>What is Hockey?</h2>
 
             <p class="intro">
@@ -291,73 +306,26 @@
             <figure>
                 <img src="images/ai-hockey.png"
                      alt="Hockey players competing on an ice rink">
-                <figcaption>Hockey is a fast and team-oriented sport.</figcaption>
-                <p>
-                    <em>
-                        AI prompt used for this image: "Create a photorealistic
-                        image of hockey players competing during an indoor
-                        ice hockey game."
-                    </em>
-                </p>
+                <figcaption>
+                    Hockey is a fast and team-oriented sport.<br>
+                </figcaption>
             </figure>
         </section>
-                        <p>
-                    <em>
-                        AI prompt used for this image: "Create a photorealistic
-                        image of hockey players competing during an indoor
-                        ice hockey game."
-                    </em>
-                </p>
+
 
         <section id="who">
             <h2>Who</h2>
 
             <p class="intro">
-                My interest in hockey comes from enjoying the combination of
-                athleticism, competition, teamwork, and the fast pace of the
-                sport.
+                I have personally played hockey since I was 5 years old. I currently play for the school team here at UNCC.
             </p>
 
-            <div class="content-grid">
-                <article class="card">
-                    <h3>Players</h3>
-                    <p>
-                        Hockey players need skating ability, coordination,
-                        awareness, and communication to contribute effectively
-                        to their team.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <h3>Teams</h3>
-                    <p>
-                        Hockey teams are made up of forwards, defensemen, and
-                        goaltenders. Each position has a different role during
-                        a game.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <h3>Fans</h3>
-                    <p>
-                        Fans add another part of the hockey experience by
-                        attending games, following teams, learning statistics,
-                        and supporting their favorite players.
-                    </p>
-                </article>
-            </div>
-
             <figure>
-                <img src="images/hockey-player.jpg"
+                <img src="images/introductonp1.png"
                      alt="Hockey player preparing for a faceoff">
-                <figcaption>A hockey player ready for the next play.</figcaption>
-                <p>
-                    <em>
-                        AI prompt used for this image: "Create a photorealistic
-                        image of an ice hockey player standing on the ice
-                        before a faceoff."
-                    </em>
-                </p>
+                <figcaption>
+                    A picture of me representing the 49er's<br>
+                </figcaption>
             </figure>
         </section>
 
@@ -423,14 +391,14 @@
             <figure>
                 <img src="images/hockey-calendar.jpg"
                      alt="Hockey schedule displayed beside hockey equipment">
-                <figcaption>Keeping track of hockey games and activities.</figcaption>
-                <p>
+                <figcaption>
+                    Keeping track of hockey games and activities.<br>
                     <em>
                         AI prompt used for this image: "Create a photorealistic
                         hockey-themed calendar with an ice rink, hockey stick,
                         and game schedule."
                     </em>
-                </p>
+                </figcaption>
             </figure>
         </section>
 
@@ -474,14 +442,14 @@
             <figure>
                 <img src="images/hockey-rink.jpg"
                      alt="Ice hockey rink prepared for a game">
-                <figcaption>An ice rink prepared for hockey.</figcaption>
-                <p>
+                <figcaption>
+                    An ice rink prepared for hockey.<br>
                     <em>
                         AI prompt used for this image: "Create a photorealistic
                         indoor ice hockey rink prepared for a competitive game,
                         viewed from the stands."
                     </em>
-                </p>
+                </figcaption>
             </figure>
         </section>
 
@@ -532,14 +500,14 @@
             <figure>
                 <img src="images/hockey-practice.jpg"
                      alt="Hockey player practicing with a puck">
-                <figcaption>Practice is an important part of improving hockey skills.</figcaption>
-                <p>
+                <figcaption>
+                    Practice is an important part of improving hockey skills.<br>
                     <em>
                         AI prompt used for this image: "Create a photorealistic
                         image of a hockey player practicing stickhandling on
                         an indoor ice rink."
                     </em>
-                </p>
+                </figcaption>
             </figure>
         </section>
 
@@ -581,14 +549,14 @@
             <figure>
                 <img src="images/hockey-fans.jpg"
                      alt="Hockey fans watching a game">
-                <figcaption>Hockey brings players and fans together.</figcaption>
-                <p>
+                <figcaption>
+                    Hockey brings players and fans together.<br>
                     <em>
                         AI prompt used for this image: "Create a photorealistic
                         image of enthusiastic hockey fans watching a close
                         hockey game from the stands."
                     </em>
-                </p>
+                </figcaption>
             </figure>
         </section>
 
@@ -671,5 +639,3 @@
 
 </body>
 </html>
-
-
