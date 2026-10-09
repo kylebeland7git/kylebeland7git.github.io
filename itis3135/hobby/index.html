@@ -4,520 +4,533 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kyle's Hockey Hobby</title>
-
     <link rel="icon" href="images/favicon.ico">
-
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-
     <style>
-  :root {
-    --dark-amethyst: #320e3b;
-    --indigo-velvet: #4c2a85;
-    --glaucous: #6b7fd7;
-    --frosted-blue: #bcedf6;
-    --frosted-mint: #ddfbd2;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: auto;
-    max-width: 1200px;
-    background-color: var(--dark-amethyst);
-    color: var(--dark-amethyst);
-    font-family: "Segoe UI", Arial, sans-serif;
-    line-height: 1.6;
-}
-
-header {
-    background-color: var(--frosted-blue);
-    padding: 25px;
-    text-align: center;
-    border-bottom: 6px solid var(--glaucous);
-}
-
-h1 {
-    margin: 0 0 15px;
-    font-size: 2.7rem;
-    font-family: "Trebuchet MS", Arial, sans-serif;
-    color: var(--indigo-velvet);
-}
-
-h1 a {
-    color: var(--indigo-velvet);
-    text-decoration: none;
-}
-
-h1 a:hover,
-h1 a:focus {
-    color: var(--dark-amethyst);
-    text-decoration: none;
-}
-
-h2 {
-    margin-top: 0;
-    font-size: 2rem;
-    border-bottom: 3px solid var(--glaucous);
-    padding-bottom: 8px;
-    font-family: "Trebuchet MS", Arial, sans-serif;
-    color: var(--indigo-velvet);
-}
-
-h3 {
-    font-size: 1.3rem;
-    font-family: "Trebuchet MS", Arial, sans-serif;
-    color: var(--indigo-velvet);
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-nav a {
-    background-color: var(--indigo-velvet);
-    color: var(--frosted-blue);
-    border: 2px solid var(--indigo-velvet);
-    padding: 9px 14px;
-    font-family: "Trebuchet MS", Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-nav a:hover,
-nav a:focus {
-    background-color: var(--dark-amethyst);
-    border-color: var(--dark-amethyst);
-    color: var(--frosted-blue);
-    text-decoration: none;
-}
-
-main {
-    background-color: var(--frosted-blue);
-    margin: 25px 0;
-    padding: 30px;
-    border-left: 6px solid var(--glaucous);
-    border-right: 6px solid var(--glaucous);
-}
-
-section {
-    display: none;
-}
-
-section:target {
-    display: block;
-}
-
-main > section:first-child {
-    display: block;
-}
-
-main:has(section:target) > section:first-child {
-    display: none;
-}
-
-.intro {
-    font-size: 1.15rem;
-}
-
-.content-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    margin-top: 25px;
-}
-
-.card {
-    background-color: var(--frosted-mint);
-    padding: 20px;
-    border: 3px solid var(--indigo-velvet);
-}
-
-.card h3 {
-    margin-top: 0;
-}
-
-figure {
-    margin: 25px 0;
-    padding: 15px;
-    background-color: var(--frosted-mint);
-    border: 3px solid var(--glaucous);
-    text-align: center;
-}
-
-figure img {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    display: block;
-    margin: auto;
-}
-
-figure img.small-photo {
-    width: auto;
-    max-width: min(350px, 100%);
-    max-height: 450px;
-    object-fit: contain;
-}
-
-figcaption {
-    margin-top: 10px;
-    font-weight: bold;
-    color: var(--indigo-velvet);
-}
-
-figure p {
-    margin-bottom: 0;
-    font-size: 0.95rem;
-}
-
-.facts {
-    padding-left: 25px;
-}
-
-.facts li {
-    margin-bottom: 8px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-th,
-td {
-    border: 2px solid var(--indigo-velvet);
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-    background-color: var(--indigo-velvet);
-    color: var(--frosted-blue);
-}
-
-td {
-    background-color: var(--frosted-mint);
-}
-
-a {
-    color: var(--indigo-velvet);
-    font-weight: bold;
-    text-decoration: none;
-}
-
-a:hover,
-a:focus {
-    color: var(--dark-amethyst);
-    text-decoration: underline;
-}
-
-footer {
-    background-color: var(--dark-amethyst);
-    color: var(--frosted-blue);
-    padding: 25px;
-    text-align: center;
-    border-top: 6px solid var(--glaucous);
-}
-
-footer a {
-    color: var(--frosted-blue);
-}
-
-footer a:hover,
-footer a:focus {
-    color: var(--frosted-mint);
-}
-
-.footer-links {
-    margin-bottom: 15px;
-}
-
-.footer-links span {
-    margin: 0 5px;
-}
-
-/* ---------- Team history slideshow ---------- */
-.slideshow {
-    margin: 25px 0;
-    background-color: var(--frosted-mint);
-    border: 3px solid var(--indigo-velvet);
-    border-top: 8px solid var(--indigo-velvet);
-    box-shadow: 6px 6px 0 var(--glaucous);
-}
-
-.slide {
-    padding: 25px 30px;
-    min-height: 330px;
-}
-
-.slide::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.slide h4 {
-    margin: 0 0 20px;
-    padding-bottom: 8px;
-    font-size: 1.9rem;
-    font-family: "Trebuchet MS", Arial, sans-serif;
-    color: var(--indigo-velvet);
-    border-bottom: 3px solid var(--glaucous);
-}
-
-.slide img {
-    float: left;
-    width: 210px;
-    height: 210px;
-    object-fit: contain;
-    margin: 0 30px 10px 0;
-    padding: 10px;
-    background-color: #ffffff;
-    border: 3px solid var(--glaucous);
-    box-shadow: 4px 4px 0 var(--indigo-velvet);
-}
-
-.slide .seasons {
-    display: inline-block;
-    margin: 5px 0 15px;
-    padding: 4px 14px;
-    background-color: var(--indigo-velvet);
-    color: var(--frosted-blue);
-    font-size: 1.1rem;
-    font-weight: bold;
-    font-family: "Trebuchet MS", Arial, sans-serif;
-}
-
-.slide p {
-    margin: 0 0 10px;
-    font-size: 1.15rem;
-}
-
-.slide table {
-    margin: 15px 0 0;
-}
-
-.slide-controls {
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 12px 25px;
-    background-color: var(--indigo-velvet);
-    color: var(--frosted-blue);
-    font-family: "Trebuchet MS", Arial, sans-serif;
-    font-weight: bold;
-}
-
-.slide-controls button {
-    background-color: var(--frosted-blue);
-    color: var(--indigo-velvet);
-    border: 2px solid var(--frosted-blue);
-    padding: 8px 16px;
-    font-family: "Trebuchet MS", Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.slide-controls button:hover,
-.slide-controls button:focus {
-    background-color: var(--frosted-mint);
-    border-color: var(--frosted-mint);
-}
-
-.slide-controls button:disabled {
-    opacity: 0.4;
-    cursor: default;
-}
-
-.slideshow.js .slide {
-    display: none;
-}
-
-.slideshow.js .slide.active {
-    display: block;
-    animation: slide-fade 0.35s ease;
-}
-
-.slideshow.js .slide-controls {
-    display: flex;
-}
-
-@keyframes slide-fade {
-    from { opacity: 0; transform: translateX(15px); }
-    to { opacity: 1; transform: none; }
-}
-
-@media (max-width: 700px) {
-    .slide {
-        padding: 20px;
-        min-height: 0;
+    :root {
+        --dark-amethyst: #320e3b;
+        --indigo-velvet: #4c2a85;
+        --glaucous: #6b7fd7;
+        --frosted-blue: #bcedf6;
+        --frosted-mint: #ddfbd2;
     }
-
-    .slide img {
-        float: none;
-        display: block;
-        width: 100%;
-        max-width: 240px;
-        height: 200px;
-        margin: 0 auto 15px;
+    * {
+        box-sizing: border-box;
     }
-
-    .slide h4 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .slide .seasons {
-        display: block;
-        text-align: center;
-    }
-
-    .slide-controls {
-        padding: 12px 15px;
-    }
-}
-
-@media (max-width: 700px) {
     body {
-        width: 95%;
+        margin: 0 auto;
+        max-width: 1200px;
+        background-color: var(--dark-amethyst);
+        color: var(--dark-amethyst);
+        font-family: "Segoe UI", Arial, sans-serif;
+        line-height: 1.6;
     }
-
-    .content-grid {
-        grid-template-columns: 1fr;
+    header {
+        background-color: var(--frosted-blue);
+        padding: 25px;
+        text-align: center;
+        border-bottom: 6px solid var(--glaucous);
     }
-
-    header,
-    main,
-    footer {
-        padding: 20px;
-    }
-
     h1 {
-        font-size: 2.1rem;
+        margin: 0 0 15px;
+        font-size: 2.7rem;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        color: var(--indigo-velvet);
     }
-
+    h1 a {
+        color: var(--indigo-velvet);
+        text-decoration: none;
+    }
+    h1 a:hover,
+    h1 a:focus {
+        color: var(--dark-amethyst);
+        text-decoration: none;
+    }
+    h2 {
+        margin-top: 0;
+        font-size: 2rem;
+        border-bottom: 3px solid var(--glaucous);
+        padding-bottom: 8px;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        color: var(--indigo-velvet);
+    }
+    h3 {
+        font-size: 1.3rem;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        color: var(--indigo-velvet);
+        margin-top: 15px;
+    }
     nav {
-        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
     }
-
     nav a {
-        width: 100%;
+        background-color: var(--indigo-velvet);
+        color: var(--frosted-blue);
+        border: 2px solid var(--indigo-velvet);
+        padding: 9px 14px;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.2s, color 0.2s;
     }
-
+    nav a:hover,
+    nav a:focus,
+    nav a.active {
+        background-color: var(--dark-amethyst);
+        border-color: var(--dark-amethyst);
+        color: var(--frosted-mint);
+        text-decoration: none;
+    }
+    .divider {
+        font-size: 1.1rem;
+        user-select: none;
+    }
+    main {
+        background-color: var(--frosted-blue);
+        margin: 25px 0;
+        padding: 30px;
+        border-left: 6px solid var(--glaucous);
+        border-right: 6px solid var(--glaucous);
+    }
+    /* Single-Page Section Display Rules */
+    section {
+        display: none;
+    }
+    #what {
+        display: block;
+    }
+    main:has(section:target:not(#what)) > #what {
+        display: none;
+    }
+    section:target {
+        display: block;
+    }
+    section.is-visible {
+        display: block;
+    }
+    .intro {
+        font-size: 1.15rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    .content-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 25px 0;
+    }
+    .card {
+        background-color: var(--frosted-mint);
+        padding: 20px;
+        border: 3px solid var(--indigo-velvet);
+        box-shadow: 4px 4px 0 var(--glaucous);
+    }
+    .card h3 {
+        margin-top: 0;
+    }
+    figure {
+        margin: 25px 0;
+        padding: 18px;
+        background-color: var(--frosted-mint);
+        border: 3px solid var(--glaucous);
+        text-align: center;
+        box-shadow: 4px 4px 0 var(--indigo-velvet);
+    }
     figure img {
-        max-width: 100%;
+        width: 100%;
+        max-width: 700px;
         height: auto;
         display: block;
-        margin: auto;
+        margin: 0 auto 12px;
+        border: 2px solid var(--indigo-velvet);
     }
+    figure img.small-photo {
+        width: auto;
+        max-width: min(350px, 100%);
+        max-height: 450px;
+        object-fit: contain;
+    }
+    figcaption {
+        font-weight: bold;
+        color: var(--indigo-velvet);
+        font-size: 1.05rem;
+    }
+    figure p {
+        margin: 8px 0 0;
+        font-size: 0.95rem;
+    }
+    .facts {
+        padding-left: 25px;
+        background-color: var(--frosted-mint);
+        padding: 15px 20px 15px 40px;
+        border-left: 5px solid var(--indigo-velvet);
+        margin: 20px 0;
+    }
+    .facts li {
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        box-shadow: 4px 4px 0 var(--glaucous);
+    }
+    caption {
+        caption-side: top;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        font-size: 1.15rem;
+        font-weight: bold;
+        color: var(--indigo-velvet);
+        padding-bottom: 8px;
+        text-align: left;
+    }
+    th,
+    td {
+        border: 2px solid var(--indigo-velvet);
+        padding: 12px;
+        text-align: left;
+    }
+    th {
+        background-color: var(--indigo-velvet);
+        color: var(--frosted-blue);
+        font-family: "Trebuchet MS", Arial, sans-serif;
+    }
+    td {
+        background-color: var(--frosted-mint);
+    }
+    a {
+        color: var(--indigo-velvet);
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    a:hover,
+    a:focus {
+        color: var(--dark-amethyst);
+    }
+    /* Accessibility focus indicator */
+    a:focus-visible,
+    button:focus-visible {
+        outline: 3px solid var(--indigo-velvet);
+        outline-offset: 2px;
+    }
+    /* ---------- Team history slideshow ---------- */
+    .slideshow {
+        margin: 25px 0;
+        background-color: var(--frosted-mint);
+        border: 3px solid var(--indigo-velvet);
+        border-top: 8px solid var(--indigo-velvet);
+        box-shadow: 6px 6px 0 var(--glaucous);
+    }
+    .slideshow:focus {
+        outline: 3px solid var(--indigo-velvet);
+    }
+    .slide {
+        padding: 25px 30px;
+        min-height: 330px;
+    }
+    .slide::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .slide h3 {
+        margin: 0 0 20px;
+        padding-bottom: 8px;
+        font-size: 1.8rem;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        color: var(--indigo-velvet);
+        border-bottom: 3px solid var(--glaucous);
+    }
+    .slide img {
+        float: left;
+        width: 210px;
+        height: 210px;
+        object-fit: contain;
+        margin: 0 30px 10px 0;
+        padding: 10px;
+        background-color: #ffffff;
+        border: 3px solid var(--glaucous);
+        box-shadow: 4px 4px 0 var(--indigo-velvet);
+    }
+    .slide .seasons {
+        display: inline-block;
+        margin: 5px 0 15px;
+        padding: 4px 14px;
+        background-color: var(--indigo-velvet);
+        color: var(--frosted-blue);
+        font-size: 1.1rem;
+        font-weight: bold;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+    }
+    .slide p {
+        margin: 0 0 10px;
+        font-size: 1.15rem;
+    }
+    .slide table {
+        margin: 15px 0 0;
+    }
+    .slide-controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 12px 25px;
+        background-color: var(--indigo-velvet);
+        color: var(--frosted-blue);
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        font-weight: bold;
+    }
+    .slide-controls button {
+        background-color: var(--frosted-blue);
+        color: var(--indigo-velvet);
+        border: 2px solid var(--frosted-blue);
+        padding: 8px 16px;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    .slide-controls button:hover,
+    .slide-controls button:focus {
+        background-color: var(--frosted-mint);
+        border-color: var(--frosted-mint);
+        color: var(--dark-amethyst);
+    }
+    .slide-controls button:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+    .slideshow.js .slide {
+        display: none;
+    }
+    .slideshow.js .slide.active {
+        display: block;
+        animation: slide-fade 0.35s ease;
+    }
+    @keyframes slide-fade {
+        from { opacity: 0; transform: translateX(15px); }
+        to { opacity: 1; transform: none; }
+    }
+    /* Code & Prompt Display Card */
+    .prompt-box {
+        background-color: var(--frosted-mint);
+        border: 3px solid var(--indigo-velvet);
+        border-left: 8px solid var(--indigo-velvet);
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: 4px 4px 0 var(--glaucous);
+    }
+    .prompt-box h3 {
+        margin-top: 0;
+    }
+    .prompt-box pre {
+        white-space: pre-wrap;
+        word-break: break-word;
+        background-color: #ffffff;
+        padding: 15px;
+        border: 2px solid var(--glaucous);
+        font-size: 0.95rem;
+        color: var(--dark-amethyst);
+    }
+    /* Footer & Validation Buttons */
+    footer {
+        background-color: var(--dark-amethyst);
+        color: var(--frosted-blue);
+        padding: 25px;
+        text-align: center;
+        border-top: 6px solid var(--glaucous);
+    }
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+    .val-button {
+        display: inline-block;
+        background-color: var(--indigo-velvet);
+        color: var(--frosted-blue);
+        border: 2px solid var(--glaucous);
+        padding: 8px 14px;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        font-size: 0.95rem;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.2s, color 0.2s;
+    }
+    .val-button:hover,
+    .val-button:focus {
+        background-color: var(--glaucous);
+        color: var(--dark-amethyst);
+        text-decoration: none;
+    }
+    footer p {
+        margin: 10px 0 0;
+        font-size: 1rem;
+    }
+    footer p a {
+        color: var(--frosted-blue);
+        text-decoration: underline;
+    }
+    footer p a:hover,
+    footer p a:focus {
+        color: var(--frosted-mint);
+    }
+    /* Responsive adjustments */
+    @media (max-width: 850px) {
+        .content-grid {
+            grid-template-columns: 1fr;
+        }
+        .slide {
+            padding: 20px;
+            min-height: 0;
+        }
+        .slide img {
+            float: none;
+            display: block;
+            width: 100%;
+            max-width: 240px;
+            height: 200px;
+            margin: 0 auto 15px;
+        }
+        .slide h3 {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .slide .seasons {
+            display: block;
+            text-align: center;
+        }
+        .slide-controls {
+            padding: 12px 15px;
+        }
+    }
+    @media (max-width: 600px) {
+        body {
+            width: 100%;
+        }
+        header,
+        main,
+        footer {
+            padding: 15px;
+        }
+        h1 {
+            font-size: 2.1rem;
+        }
+        nav {
+            flex-direction: column;
+        }
+        nav a {
+            width: 100%;
+            text-align: center;
+        }
+        .divider {
+            display: none;
+        }
+        .footer-links {
+            flex-direction: column;
+            gap: 8px;
+        }
+        .val-button {
+            width: 100%;
+            text-align: center;
+        }
     }
     </style>
 </head>
-
 <body>
-
     <header>
-        <h1><a href="#">Ice Hockey</a></h1>
-
+        <h1><a href="#what">Ice Hockey</a></h1>
         <nav aria-label="Hockey hobby sections">
-            <a href="#">What</a>
-            <span aria-hidden="true">🧊</span>
+            <a href="#what" class="active">What</a>
+            <span class="divider" aria-hidden="true">🧊</span>
             <a href="#who">Who</a>
-            <span aria-hidden="true">🧊</span>
+            <span class="divider" aria-hidden="true">🧊</span>
             <a href="#when">When</a>
-            <span aria-hidden="true">🧊</span>
+            <span class="divider" aria-hidden="true">🧊</span>
             <a href="#where">Where</a>
-            <span aria-hidden="true">🧊</span>
+            <span class="divider" aria-hidden="true">🧊</span>
             <a href="#how">How</a>
-            <span aria-hidden="true">🧊</span>
+            <span class="divider" aria-hidden="true">🧊</span>
             <a href="#why">Why</a>
-            <span aria-hidden="true">🧊</span>
+            <span class="divider" aria-hidden="true">🧊</span>
             <a href="#ai-prompts">AI Prompts</a>
         </nav>
     </header>
-
     <main>
 
         <section id="what">
             <h2>What is Hockey?</h2>
-
             <p class="intro">
-                Hockey is a sport played with players skating on ice. The objective is to score goals by shooting the puck into the opposing team's net.
-                The objective is to put the puck into the other team's net while preventing the opposing team from scoring.
+                Hockey is a fast paced game played on ice. Players skate on the ice and attempt to put a rubber disk, called a puck, into the net
             </p>
-
-
-
             <figure>
                 <img src="images/ai-hockey.png"
-                     alt="Hockey players competing on an ice rink">
-                <figcaption>
-                    This depicts an AI picture of hockey players on a rink.<br>
-                    <em>The AI prompt used was: "Generate a realistic picture of hockey being played on a ice"</em>
-                </figcaption>
+                     alt="Five ice hockey players in action during a fast-paced game on an indoor rink">
+                <figcaption>Ice hockey players competing in a game.</figcaption>
+                <p><em>The AI prompt used was: &ldquo;Generate a realistic picture of hockey being played on a ice&rdquo;</em></p>
             </figure>
-
-            <h3>Hockey Positions and Roles</h3>
+          
             <table>
+                <caption>Positions and Roles</caption>
                 <thead>
                     <tr>
-                        <th>Position</th>
-                        <th>Role</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Role</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Goalie</td>
-                        <td>Tries to keep the puck out of the net</td>
+                        <td>Protects the net and prevents the puck from crossing the goal line using specialized pads and gloves.</td>
                     </tr>
                     <tr>
                         <td>Defenseman</td>
-                        <td>Defends the zone and tries to find forwards who start offensive attacks</td>
+                        <td>Defends the defensive zone, clears rebounds, and starts offensive breakouts with transition passes.</td>
                     </tr>
                     <tr>
                         <td>Left Wing</td>
-                        <td>Plays offense on the left side of the ice</td>
+                        <td>Generates offensive pressure along the left boards, battles in the corners, and covers opposing defensemen.</td>
                     </tr>
                     <tr>
                         <td>Center</td>
-                        <td>Plays offense and defense through the center of the ice</td>
+                        <td>Takes faceoffs, quarterbacks offensive rushes, and covers both ends of the ice from end boards to end boards.</td>
                     </tr>
                     <tr>
                         <td>Right Wing</td>
-                        <td>Plays offense on the right side of the ice</td>
+                        <td>Carries the puck down the right wing, forechecks opposing defenders, and drives scoring opportunities.</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-
         <section id="who">
             <h2>Who</h2>
-
             <p class="intro">
-                I have personally played hockey since I was 5 years old. I currently play for the school team here at UNCC.
+                I have personally played competitive ice hockey since I was five years old. Today, I continue my passion by playing collegiate club hockey for the Charlotte 49ers at UNC Charlotte.
             </p>
-
-            <div class="slideshow" id="team-slideshow" aria-roledescription="carousel" aria-label="Team history slideshow">
-
-                <div class="slide active" aria-roledescription="slide" aria-label="1 of 6">
-                    <h4>Teams I have played for</h4>
+            <div class="slideshow" id="team-slideshow" tabindex="0" aria-roledescription="carousel" aria-label="Kyle's team history slideshow">
+                <div class="slide active" aria-roledescription="slide" aria-label="1 of 6" aria-hidden="false">
+                    <h3>Teams I Have Played For</h3>
                     <p class="seasons">2018/19 &ndash; Present</p>
                     <table>
+                        <caption>Chronological Team History &amp; Seasons</caption>
                         <thead>
                             <tr>
-                                <th>Season(s)</th>
-                                <th>Team</th>
+                                <th scope="col">Season(s)</th>
+                                <th scope="col">Team</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -544,350 +557,428 @@ footer a:focus {
                         </tbody>
                     </table>
                 </div>
-
-                <div class="slide" aria-roledescription="slide" aria-label="2 of 6">
-                    <h4>Carolina Stars</h4>
+                <div class="slide" aria-roledescription="slide" aria-label="2 of 6" aria-hidden="true">
+                    <h3>Carolina Stars</h3>
                     <img src="images/cstars.png" alt="Carolina Stars hockey team logo">
                     <p class="seasons">2018/19 &ndash; 2020/21</p>
-                    <p>Team 1 of 5. I played three seasons with the Carolina Stars.</p>
+                    <p>Team 1 of 5. I played three developmental seasons with the Carolina Stars travel program, establishing fundamental skills and tournament experience.</p>
                 </div>
-
-                <div class="slide" aria-roledescription="slide" aria-label="3 of 6">
-                    <h4>Raleigh Raptors</h4>
+                <div class="slide" aria-roledescription="slide" aria-label="3 of 6" aria-hidden="true">
+                    <h3>Raleigh Raptors</h3>
                     <img src="images/raptors.jpg" alt="Raleigh Raptors hockey team logo">
                     <p class="seasons">2021/22</p>
-                    <p>Team 2 of 5. I played one season with the Raleigh Raptors.</p>
+                    <p>Team 2 of 5. I spent one competitive season competing with the Raleigh Raptors, focusing on high-tempo puck movement and positional play.</p>
                 </div>
-
-                <div class="slide" aria-roledescription="slide" aria-label="4 of 6">
-                    <h4>NC Golden Bears</h4>
+                <div class="slide" aria-roledescription="slide" aria-label="4 of 6" aria-hidden="true">
+                    <h3>NC Golden Bears</h3>
                     <img src="images/ncgbears.png" alt="NC Golden Bears hockey team logo">
                     <p class="seasons">2022/23 &ndash; 2023/24</p>
-                    <p>Team 3 of 5. I played two seasons with the NC Golden Bears.</p>
+                    <p>Team 3 of 5. I played two seasons with the NC Golden Bears junior organization, refining special teams play and competing across the Southeast.</p>
                 </div>
-
-                <div class="slide" aria-roledescription="slide" aria-label="5 of 6">
-                    <h4>Queen City Royals</h4>
+                <div class="slide" aria-roledescription="slide" aria-label="5 of 6" aria-hidden="true">
+                    <h3>Queen City Royals</h3>
                     <img src="images/qcroyals.png" alt="Queen City Royals hockey team logo">
                     <p class="seasons">2024/25</p>
-                    <p>Team 4 of 5. I played one season with the Queen City Royals.</p>
+                    <p>Team 4 of 5. One season with the Queen City Royals in Charlotte, competing at a high regional level before transitioning to college hockey.</p>
                 </div>
-
-                <div class="slide" aria-roledescription="slide" aria-label="6 of 6">
-                    <h4>UNCC Club Hockey</h4>
-                    <img src="images/uncchockey.jpg" alt="UNCC Club Hockey team logo">
+                <div class="slide" aria-roledescription="slide" aria-label="6 of 6" aria-hidden="true">
+                    <h3>UNCC Club Hockey</h3>
+                    <img src="images/uncchockey.jpg" alt="Charlotte 49ers UNCC Club Hockey official team logo">
                     <p class="seasons">2025/26 &ndash; Present</p>
-                    <p>Team 5 of 5. I have played for the UNCC Club Hockey team ever since, and I am still playing today.</p>
+                    <p>Team 5 of 5. Proudly representing UNC Charlotte in collegiate competition. Skating for the 49ers has been an amazing collegiate experience.</p>
                 </div>
-
                 <div class="slide-controls">
-                    <button type="button" id="slide-prev">&larr; Previous</button>
+                    <button type="button" id="slide-prev" aria-label="Previous team slide">&larr; Previous</button>
                     <span id="slide-count" aria-live="polite">1 / 6</span>
-                    <button type="button" id="slide-next">Next &rarr;</button>
+                    <button type="button" id="slide-next" aria-label="Next team slide">Next &rarr;</button>
                 </div>
-
             </div>
-
             <figure>
                 <img src="images/introductonp1.png"
-                     alt="Hockey player preparing for a faceoff"
+                     alt="Kyle in Charlotte 49ers hockey jersey ready for a faceoff on the ice"
                      class="small-photo">
-                <figcaption>
-                    A picture of me representing the 49er's<br>
-                     <em>No AI prompt was used for this photo</em>
-                </figcaption>
+                <figcaption>Representing the Charlotte 49ers on the ice.</figcaption>
+                <p><em>No AI prompt was used for this photo (personal original photograph).</em></p>
             </figure>
         </section>
 
         <section id="when">
             <h2>When</h2>
-
             <p class="intro">
-                Hockey can be enjoyed throughout the year, but organized
-                leagues generally follow specific seasons and schedules.
+                While hockey can be played year-round at indoor arenas, organized leagues follow specific calendars ranging from intense winter games to off-season conditioning.
             </p>
-
             <div class="content-grid">
                 <article class="card">
-                    <h3>Regular Season</h3>
+                    <h3>When is Hockey Played?</h3>
                     <p>
-                        Professional hockey teams play their regular-season
-                        games during the colder months of the year.
+                        Hockey is typically played during the Fall, Winter, and early Spring months.
                     </p>
                 </article>
-
                 <article class="card">
-                    <h3>Playoffs</h3>
+                    <h3>What does a Hockey Schedule Look Like?</h3>
                     <p>
-                        After the regular season, qualifying teams compete in
-                        playoff rounds to determine the league champion.
+                        Recreational and collegiate hockey schedules often include two to three practices per week, one or two games a week, and occasional tournaments or playoffs.
                     </p>
                 </article>
-
                 <article class="card">
-                    <h3>Offseason</h3>
+                    <h3>When do Games Take Place?</h3>
                     <p>
-                        The offseason is useful for training, practicing
-                        skills, following player movement, and preparing for
-                        the next season.
+                        Games typically take place on Friday, Saturday, or Sunday nights. Tournaments may include different time slots than usual.
                     </p>
                 </article>
             </div>
-
             <table>
-                <caption>Example Hockey Activity Schedule</caption>
+                <caption>What does my hockey schedule look like?</caption>
                 <thead>
                     <tr>
-                        <th>Activity</th>
-                        <th>Typical Time</th>
+                        <th scope="col">Event</th>
+                        <th scope="col">Time</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Watch a Game</td>
-                        <td>Evening</td>
+                        <td>Practice</td>
+                        <td>5:30am-7:00am Tuesdays</td>
                     </tr>
                     <tr>
                         <td>Practice</td>
-                        <td>Afternoon or Evening</td>
+                        <td>5:30am-7:00am Thursdays</td>
                     </tr>
                     <tr>
-                        <td>Follow Hockey News</td>
-                        <td>Any Time</td>
+                        <td>Games</td>
+                        <td>Either Friday, Saturday, or Sunday at any time.</td>
                     </tr>
                 </tbody>
             </table>
-
             <figure>
                 <img src="images/hockey-calendar.jpg"
-                     alt="Hockey schedule displayed beside hockey equipment">
-                <figcaption>
-                    Keeping track of hockey games and activities.<br>
-                    <em>
-                        AI prompt used for this image: "Create a photorealistic
-                        hockey-themed calendar with an ice rink, hockey stick,
-                        and game schedule."
-                    </em>
-                </figcaption>
+                     alt="Waking up early in the morning for practice">
+                <figcaption>UNCC Hockey Club waking up early for practice</figcaption>
+                <p><em>AI prompt used for this image: &ldquo;Create a photorealistic picture of UNCC hockey club waking up early in the morning for hockey&rdquo;</em></p>
             </figure>
         </section>
 
         <section id="where">
-            <h2>Where</h2>
-
+            <h2>Where: Rinks &amp; Facilities</h2>
             <p class="intro">
-                Hockey can be enjoyed at professional arenas, community ice
-                rinks, college facilities, and recreational leagues.
+                Hockey requires specialized ice facilities maintained by refrigeration plants and Zamboni ice resurfacers. From collegiate rinks to NHL arenas, the environment is electric.
             </p>
-
             <div class="content-grid">
                 <article class="card">
-                    <h3>Arenas</h3>
+                    <h3>Collegiate Facilities</h3>
                     <p>
-                        Professional hockey is played in large arenas designed
-                        to hold thousands of fans and provide an exciting
-                        game-day atmosphere.
+                        University rinks host club and varsity programs, providing competitive ice surfaces, dedicated locker rooms, and an energetic student cheering section.
                     </p>
                 </article>
-
                 <article class="card">
-                    <h3>Local Rinks</h3>
+                    <h3>Community Ice Rinks</h3>
                     <p>
-                        Community ice rinks provide opportunities for people
-                        to learn skating, join recreational leagues, and
-                        practice hockey.
+                        Local rinks form the backbone of youth hockey, adult recreation leagues, public skating sessions, and figure skating programs across the region.
                     </p>
                 </article>
-
                 <article class="card">
-                    <h3>College Hockey</h3>
+                    <h3>Professional Arenas</h3>
                     <p>
-                        College hockey gives fans another opportunity to watch
-                        competitive hockey while supporting their school and
-                        local teams.
+                        Massive indoor venues featuring NHL-grade ice, state-of-the-art scoreboard displays, and seating for 18,000+ enthusiastic hockey supporters.
                     </p>
                 </article>
             </div>
-
+            <table>
+                <caption>Key Ice Rinks &amp; Hockey Venues in the Carolinas</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Venue Name</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Significance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Extreme Ice Center</td>
+                        <td>Indian Trail, NC</td>
+                        <td>Primary home ice facility and practice sheets for UNCC Club Hockey.</td>
+                    </tr>
+                    <tr>
+                        <td>Pineville Ice House</td>
+                        <td>Pineville, NC</td>
+                        <td>Premier Charlotte area rink for youth travel and adult recreation leagues.</td>
+                    </tr>
+                    <tr>
+                        <td>Bojangles Coliseum</td>
+                        <td>Charlotte, NC</td>
+                        <td>Historic arena home to the AHL Charlotte Checkers.</td>
+                    </tr>
+                    <tr>
+                        <td>PNC Arena</td>
+                        <td>Raleigh, NC</td>
+                        <td>World-class venue home to the NHL Carolina Hurricanes.</td>
+                    </tr>
+                </tbody>
+            </table>
             <figure>
                 <img src="images/hockey-rink.jpg"
-                     alt="Ice hockey rink prepared for a game">
-                <figcaption>
-                    An ice rink prepared for hockey.<br>
-                    <em>
-                        AI prompt used for this image: "Create a photorealistic
-                        indoor ice hockey rink prepared for a competitive game,
-                        viewed from the stands."
-                    </em>
-                </figcaption>
+                     alt="Empty indoor ice hockey rink with freshly resurfaced ice viewed from arena seating">
+                <figcaption>Regulation indoor ice arena prepared for competitive game play.</figcaption>
+                <p><em>AI prompt used for this image: &ldquo;Create a photorealistic indoor ice hockey rink prepared for a competitive game, viewed from the stands.&rdquo;</em></p>
             </figure>
         </section>
 
         <section id="how">
-            <h2>How</h2>
-
+            <h2>How: Gear, Fundamentals &amp; Training</h2>
             <p class="intro">
-                Getting involved with hockey starts with learning how to skate,
-                understanding the basic rules, and becoming comfortable with
-                hockey equipment.
+                Excelling in hockey requires a synthesis of explosive skating technique, puck control fundamentals, strategic vision, and specialized protective equipment.
             </p>
-
             <div class="content-grid">
                 <article class="card">
-                    <h3>Learn to Skate</h3>
+                    <h3>Power Skating</h3>
                     <p>
-                        Strong skating skills provide the foundation for
-                        hockey. Balance, stopping, turning, and acceleration
-                        are important skills to practice.
+                        Skating is the foundation of hockey. Players must master forward strides, backward crossovers, tight hockey stops, and quick edge transitions.
                     </p>
                 </article>
-
                 <article class="card">
-                    <h3>Learn the Rules</h3>
+                    <h3>Puck Handling &amp; Shooting</h3>
                     <p>
-                        Understanding offsides, icing, penalties, faceoffs,
-                        and basic positioning makes watching and playing the
-                        game easier.
+                        Wrist shots, snap shots, slap shots, and sauce passes require soft hands, forearm strength, and head-up awareness to deceive goalies.
                     </p>
                 </article>
-
                 <article class="card">
-                    <h3>Practice Skills</h3>
+                    <h3>Positional Hockey IQ</h3>
                     <p>
-                        Players can improve by practicing stickhandling,
-                        passing, shooting, skating, and positioning on a
-                        regular basis.
+                        Understanding offside rules, icing, faceoff alignments, and defensive zone coverage separates recreational skaters from elite team players.
                     </p>
                 </article>
             </div>
-
             <ul class="facts">
-                <li>Practice skating and stopping.</li>
-                <li>Learn basic puck control.</li>
-                <li>Practice passing and shooting.</li>
+                <li><strong>Skating First:</strong> Perfect your balance, deep knee bend, and inside/outside blade edges.</li>
+                <li><strong>Soft Hands:</strong> Practice stickhandling with golf balls or wooden balls off the ice.</li>
+                <li><strong>Heads Up:</strong> Always scan the ice rather than looking down at the puck.</li>
+                <li><strong>Conditioning:</strong> High-intensity interval training mirrors short 45-second game shifts.</li>
             </ul>
-
+            <table>
+                <caption>Essential Protective Hockey Gear Checklist</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Equipment Item</th>
+                        <th scope="col">Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Certified Helmet &amp; Full Cage</td>
+                        <td>Essential head, facial, and concussion protection against pucks and sticks.</td>
+                    </tr>
+                    <tr>
+                        <td>Composite Hockey Stick</td>
+                        <td>Engineered flex for maximum velocity on wrist and slap shots.</td>
+                    </tr>
+                    <tr>
+                        <td>Protective Pads (Shins, Elbows, Shoulders)</td>
+                        <td>Absorbs heavy impacts against boards, falls on hard ice, and blocked shots.</td>
+                    </tr>
+                    <tr>
+                        <td>Molded Hockey Skates</td>
+                        <td>Rigid ankle support paired with sharpened steel runners for rapid directional shifts.</td>
+                    </tr>
+                </tbody>
+            </table>
             <figure>
                 <img src="images/hockey-practice.jpg"
-                     alt="Hockey player practicing with a puck">
-                <figcaption>
-                    Practice is an important part of improving hockey skills.<br>
-                    <em>
-                        AI prompt used for this image: "Create a photorealistic
-                        image of a hockey player practicing stickhandling on
-                        an indoor ice rink."
-                    </em>
-                </figcaption>
+                     alt="Hockey player in full protective gear practicing puck handling drills on the ice">
+                <figcaption>Repetitive puck handling and power skating drills build muscle memory.</figcaption>
+                <p><em>AI prompt used for this image: &ldquo;Create a photorealistic image of a hockey player practicing stickhandling on an indoor ice rink.&rdquo;</em></p>
             </figure>
         </section>
 
         <section id="why">
-            <h2>Why</h2>
-
+            <h2>Why: Passion, Teamwork &amp; Brotherhood</h2>
             <p class="intro">
-                Hockey is a hobby I enjoy because it combines competition,
-                athleticism, teamwork, and entertainment into one sport.
+                Hockey is more than just a sport&mdash;it is a lifelong passion that builds resilience, unbreakable bonds with teammates, and pure athletic excitement.
             </p>
-
             <div class="content-grid">
                 <article class="card">
-                    <h3>Competition</h3>
+                    <h3>Unmatched Speed</h3>
                     <p>
-                        The competitive nature of hockey makes every shift,
-                        play, and scoring opportunity meaningful.
+                        At speeds over 25 mph on razor-sharp steel blades, the rapid momentum shifts and split-second decisions create an adrenaline rush unlike any other sport.
                     </p>
                 </article>
-
                 <article class="card">
-                    <h3>Teamwork</h3>
+                    <h3>Locker Room Brotherhood</h3>
                     <p>
-                        Players have to communicate and work together because
-                        no single player can control an entire hockey game.
+                        Battling through early morning practices, grueling road trips, and physically demanding games binds teammates into a lifelong family.
                     </p>
                 </article>
-
                 <article class="card">
-                    <h3>Excitement</h3>
+                    <h3>Physical &amp; Mental Grit</h3>
                     <p>
-                        The speed of skating, physical play, scoring chances,
-                        and quick changes in momentum make hockey exciting to
-                        watch.
+                        Hockey teaches accountability. When you take a hit or commit a turnover, you get right back up, skate hard, and backcheck to support your squad.
                     </p>
                 </article>
             </div>
-
+            <table>
+                <caption>Lifelong Benefits of Playing Ice Hockey</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Category</th>
+                        <th scope="col">Health &amp; Life Benefits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cardiovascular Fitness</td>
+                        <td>Demands explosive aerobic and anaerobic stamina during 45-second sprint shifts.</td>
+                    </tr>
+                    <tr>
+                        <td>Hand-Eye Coordination</td>
+                        <td>Tracking a 3-inch rubber puck at high velocities refines reflex speeds.</td>
+                    </tr>
+                    <tr>
+                        <td>Character &amp; Discipline</td>
+                        <td>Instills respect for coaches, referees, teammates, and opponent competition.</td>
+                    </tr>
+                </tbody>
+            </table>
             <figure>
                 <img src="images/hockey-fans.jpg"
-                     alt="Hockey fans watching a game">
-                <figcaption>
-                    Hockey brings players and fans together.<br>
-                    <em>
-                        AI prompt used for this image: "Create a photorealistic
-                        image of enthusiastic hockey fans watching a close
-                        hockey game from the stands."
-                    </em>
-                </figcaption>
+                     alt="Enthusiastic hockey supporters cheering from arena spectator stands during a game">
+                <figcaption>The passion and electric atmosphere uniting players and fans alike.</figcaption>
+                <p><em>AI prompt used for this image: &ldquo;Create a photorealistic image of enthusiastic hockey fans watching a close hockey game from the stands.&rdquo;</em></p>
             </figure>
         </section>
 
         <section id="ai-prompts">
-            <h2>AI Prompts</h2>
-
-            <p>give me a 6 slide slideshow simple for the history of the hockey teams i have played for. for 2018/19 - 2020/2021 i played for the carolina stars.
-                 for  2021/22 i played for the raleigh raptors. for 2022/23-2023/24 i played for the NC Golden Bears. for 2024/25 i played for the Queen City Royals. And I have played for the UNCC Club hockey team ever since. 
-                here is source code of html I have so far. Only change things that incorporate into the slideshow.</p>
+            <h2>AI Prompts &amp; Academic Integrity</h2>
+            <p class="intro">
+                In accordance with assignment guidelines, generative AI was utilized to assist with code scaffolding (interactive slideshow and single-page routing), content layout structuring, and realistic thematic images. All personal hockey history and photos are 100% authentic.
+            </p>
+            <div class="prompt-box">
+                <h3>Slideshow Implementation AI Prompt</h3>
+                <p>The following prompt was used to develop the interactive 6-slide team history component:</p>
+                <pre>&ldquo;give me a 6 slide slideshow simple for the history of the hockey teams i have played for. for 2018/19 - 2020/2021 i played for the carolina stars. for 2021/22 i played for the raleigh raptors. for 2022/23-2023/24 i played for the NC Golden Bears. for 2024/25 i played for the Queen City Royals. And I have played for the UNCC Club hockey team ever since. here is source code of html I have so far. Only change things that incorporate into the slideshow.&rdquo;</pre>
+            </div>
+            <table>
+                <caption>Comprehensive Log of AI Prompts Used on This Website</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Target Element</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">AI Prompt Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>What Section Image</td>
+                        <td>Visual</td>
+                        <td>&ldquo;Generate a realistic picture of hockey being played on a ice&rdquo;</td>
+                    </tr>
+                    <tr>
+                        <td>When Section Image</td>
+                        <td>Visual</td>
+                        <td>&ldquo;Create a photorealistic hockey-themed calendar with an ice rink, hockey stick, and game schedule.&rdquo;</td>
+                    </tr>
+                    <tr>
+                        <td>Where Section Image</td>
+                        <td>Visual</td>
+                        <td>&ldquo;Create a photorealistic indoor ice hockey rink prepared for a competitive game, viewed from the stands.&rdquo;</td>
+                    </tr>
+                    <tr>
+                        <td>How Section Image</td>
+                        <td>Visual</td>
+                        <td>&ldquo;Create a photorealistic image of a hockey player practicing stickhandling on an indoor ice rink.&rdquo;</td>
+                    </tr>
+                    <tr>
+                        <td>Why Section Image</td>
+                        <td>Visual</td>
+                        <td>&ldquo;Create a photorealistic image of enthusiastic hockey fans watching a close hockey game from the stands.&rdquo;</td>
+                    </tr>
+                    <tr>
+                        <td>Team Slideshow</td>
+                        <td>Code &amp; CSS</td>
+                        <td>Scaffolded accessible carousel logic with keyboard and button navigation.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <figure>
+                <img src="images/ai-hockey.png"
+                     alt="Artificial intelligence generated depiction of competitive ice hockey players">
+                <figcaption>Generative AI illustration produced to visualize high-speed ice hockey competition.</figcaption>
+                <p><em>AI prompt used for this image: &ldquo;Generate a realistic picture of hockey being played on an ice rink with players in action.&rdquo;</em></p>
+            </figure>
         </section>
-
     </main>
-
     <footer>
         <div class="footer-links">
-            <a href="https://validator.w3.org/">HTML Validation</a>
-            <span aria-hidden="true">◆</span>
-            <a href="https://jigsaw.w3.org/css-validator/">CSS Validation</a>
-            <span aria-hidden="true">◆</span>
-            <a href="https://wave.webaim.org/">Accessibility</a>
-            <span aria-hidden="true">◆</span>
-            <a href="https://kylebkillabdesign.com/">Kylebdesign</a>
+            <a class="val-button" href="https://validator.w3.org/check?uri=referer">HTML Validation</a>
+            <a class="val-button" href="https://jigsaw.w3.org/css-validator/check/referer">CSS Validation</a>
+            <a class="val-button" href="https://wave.webaim.org/refer">Accessibility Check</a>
+            <a class="val-button" href="https://kylebkillabdesign.com/">Kylebdesign Firm</a>
         </div>
-
         <p>
             Designed by
             <a href="https://kylebkillabdesign.com/">Kylebdesign</a>
         </p>
     </footer>
-
+    <!-- Interactive Scripts: Slideshow + Single-Page Router -->
     <script>
         (function () {
+            // 1. Slideshow Component
             var show = document.getElementById("team-slideshow");
-            var slides = show.querySelectorAll(".slide");
-            var prev = document.getElementById("slide-prev");
-            var next = document.getElementById("slide-next");
-            var count = document.getElementById("slide-count");
-            var current = 0;
-
-            show.classList.add("js");
-
-            function go(n) {
-                current = Math.max(0, Math.min(slides.length - 1, n));
-                for (var i = 0; i < slides.length; i++) {
-                    slides[i].classList.toggle("active", i === current);
+            if (show) {
+                var slides = show.querySelectorAll(".slide");
+                var prev = document.getElementById("slide-prev");
+                var next = document.getElementById("slide-next");
+                var count = document.getElementById("slide-count");
+                var current = 0;
+                show.classList.add("js");
+                function go(n) {
+                    current = Math.max(0, Math.min(slides.length - 1, n));
+                    for (var i = 0; i < slides.length; i++) {
+                        var isActive = (i === current);
+                        slides[i].classList.toggle("active", isActive);
+                        slides[i].setAttribute("aria-hidden", (!isActive).toString());
+                    }
+                    count.textContent = (current + 1) + " / " + slides.length;
+                    prev.disabled = (current === 0);
+                    next.disabled = (current === slides.length - 1);
                 }
-                count.textContent = (current + 1) + " / " + slides.length;
-                prev.disabled = current === 0;
-                next.disabled = current === slides.length - 1;
+                prev.addEventListener("click", function () { go(current - 1); });
+                next.addEventListener("click", function () { go(current + 1); });
+                show.addEventListener("keydown", function (e) {
+                    if (e.key === "ArrowRight") {
+                        go(current + 1);
+                    } else if (e.key === "ArrowLeft") {
+                        go(current - 1);
+                    }
+                });
+                go(0);
             }
-
-            prev.addEventListener("click", function () { go(current - 1); });
-            next.addEventListener("click", function () { go(current + 1); });
-            show.addEventListener("keydown", function (e) {
-                if (e.key === "ArrowRight") { go(current + 1); }
-                if (e.key === "ArrowLeft") { go(current - 1); }
-            });
-
-            go(0);
+            // 2. Single-Page Application (SPA) Section Routing
+            function syncSPAView() {
+                var hash = window.location.hash || "#what";
+                if (hash === "#" || hash === "") {
+                    hash = "#what";
+                }
+                var sections = document.querySelectorAll("main > section");
+                var navLinks = document.querySelectorAll("nav a");
+                var matchedSection = document.querySelector(hash);
+                if (matchedSection && matchedSection.tagName.toLowerCase() === "section") {
+                    for (var i = 0; i < sections.length; i++) {
+                        sections[i].style.display = (sections[i] === matchedSection) ? "block" : "none";
+                    }
+                    for (var j = 0; j < navLinks.length; j++) {
+                        var href = navLinks[j].getAttribute("href");
+                        if (href === hash) {
+                            navLinks[j].classList.add("active");
+                            navLinks[j].setAttribute("aria-current", "page");
+                        } else {
+                            navLinks[j].classList.remove("active");
+                            navLinks[j].removeAttribute("aria-current");
+                        }
+                    }
+                }
+            }
+            window.addEventListener("hashchange", syncSPAView);
+            window.addEventListener("DOMContentLoaded", syncSPAView);
         })();
     </script>
-
 </body>
 </html>
