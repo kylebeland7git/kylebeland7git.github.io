@@ -159,6 +159,13 @@ figure img {
     margin: auto;
 }
 
+figure img.small-photo {
+    width: auto;
+    max-width: min(350px, 100%);
+    max-height: 450px;
+    object-fit: contain;
+}
+
 figcaption {
     margin-top: 10px;
     font-weight: bold;
@@ -237,6 +244,149 @@ footer a:focus {
     margin: 0 5px;
 }
 
+/* ---------- Team history slideshow ---------- */
+.slideshow {
+    margin: 25px 0;
+    background-color: var(--frosted-mint);
+    border: 3px solid var(--indigo-velvet);
+    border-top: 8px solid var(--indigo-velvet);
+    box-shadow: 6px 6px 0 var(--glaucous);
+}
+
+.slide {
+    padding: 25px 30px;
+    min-height: 330px;
+}
+
+.slide::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.slide h4 {
+    margin: 0 0 20px;
+    padding-bottom: 8px;
+    font-size: 1.9rem;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: var(--indigo-velvet);
+    border-bottom: 3px solid var(--glaucous);
+}
+
+.slide img {
+    float: left;
+    width: 210px;
+    height: 210px;
+    object-fit: contain;
+    margin: 0 30px 10px 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 3px solid var(--glaucous);
+    box-shadow: 4px 4px 0 var(--indigo-velvet);
+}
+
+.slide .seasons {
+    display: inline-block;
+    margin: 5px 0 15px;
+    padding: 4px 14px;
+    background-color: var(--indigo-velvet);
+    color: var(--frosted-blue);
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.slide p {
+    margin: 0 0 10px;
+    font-size: 1.15rem;
+}
+
+.slide table {
+    margin: 15px 0 0;
+}
+
+.slide-controls {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 25px;
+    background-color: var(--indigo-velvet);
+    color: var(--frosted-blue);
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-weight: bold;
+}
+
+.slide-controls button {
+    background-color: var(--frosted-blue);
+    color: var(--indigo-velvet);
+    border: 2px solid var(--frosted-blue);
+    padding: 8px 16px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.slide-controls button:hover,
+.slide-controls button:focus {
+    background-color: var(--frosted-mint);
+    border-color: var(--frosted-mint);
+}
+
+.slide-controls button:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.slideshow.js .slide {
+    display: none;
+}
+
+.slideshow.js .slide.active {
+    display: block;
+    animation: slide-fade 0.35s ease;
+}
+
+.slideshow.js .slide-controls {
+    display: flex;
+}
+
+@keyframes slide-fade {
+    from { opacity: 0; transform: translateX(15px); }
+    to { opacity: 1; transform: none; }
+}
+
+@media (max-width: 700px) {
+    .slide {
+        padding: 20px;
+        min-height: 0;
+    }
+
+    .slide img {
+        float: none;
+        display: block;
+        width: 100%;
+        max-width: 240px;
+        height: 200px;
+        margin: 0 auto 15px;
+    }
+
+    .slide h4 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .slide .seasons {
+        display: block;
+        text-align: center;
+    }
+
+    .slide-controls {
+        padding: 12px 15px;
+    }
+}
+
 @media (max-width: 700px) {
     body {
         width: 95%;
@@ -270,10 +420,7 @@ footer a:focus {
         display: block;
         margin: auto;
     }
-    figure small-photo {
-    max-width: 35px;
     }
-}
     </style>
 </head>
 
@@ -360,6 +507,86 @@ footer a:focus {
             <p class="intro">
                 I have personally played hockey since I was 5 years old. I currently play for the school team here at UNCC.
             </p>
+
+            <div class="slideshow" id="team-slideshow" aria-roledescription="carousel" aria-label="Team history slideshow">
+
+                <div class="slide active" aria-roledescription="slide" aria-label="1 of 6">
+                    <h4>Teams I have played for</h4>
+                    <p class="seasons">2018/19 &ndash; Present</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Season(s)</th>
+                                <th>Team</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2018/19 &ndash; 2020/21</td>
+                                <td>Carolina Stars</td>
+                            </tr>
+                            <tr>
+                                <td>2021/22</td>
+                                <td>Raleigh Raptors</td>
+                            </tr>
+                            <tr>
+                                <td>2022/23 &ndash; 2023/24</td>
+                                <td>NC Golden Bears</td>
+                            </tr>
+                            <tr>
+                                <td>2024/25</td>
+                                <td>Queen City Royals</td>
+                            </tr>
+                            <tr>
+                                <td>2025/26 &ndash; Present</td>
+                                <td>UNCC Club Hockey</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="slide" aria-roledescription="slide" aria-label="2 of 6">
+                    <h4>Carolina Stars</h4>
+                    <img src="images/cstars.png" alt="Carolina Stars hockey team logo">
+                    <p class="seasons">2018/19 &ndash; 2020/21</p>
+                    <p>Team 1 of 5. I played three seasons with the Carolina Stars.</p>
+                </div>
+
+                <div class="slide" aria-roledescription="slide" aria-label="3 of 6">
+                    <h4>Raleigh Raptors</h4>
+                    <img src="images/raptors.jpg" alt="Raleigh Raptors hockey team logo">
+                    <p class="seasons">2021/22</p>
+                    <p>Team 2 of 5. I played one season with the Raleigh Raptors.</p>
+                </div>
+
+                <div class="slide" aria-roledescription="slide" aria-label="4 of 6">
+                    <h4>NC Golden Bears</h4>
+                    <img src="images/ncgbears.png" alt="NC Golden Bears hockey team logo">
+                    <p class="seasons">2022/23 &ndash; 2023/24</p>
+                    <p>Team 3 of 5. I played two seasons with the NC Golden Bears.</p>
+                </div>
+
+                <div class="slide" aria-roledescription="slide" aria-label="5 of 6">
+                    <h4>Queen City Royals</h4>
+                    <img src="images/qcroyals.png" alt="Queen City Royals hockey team logo">
+                    <p class="seasons">2024/25</p>
+                    <p>Team 4 of 5. I played one season with the Queen City Royals.</p>
+                </div>
+
+                <div class="slide" aria-roledescription="slide" aria-label="6 of 6">
+                    <h4>UNCC Club Hockey</h4>
+                    <img src="images/uncchockey.jpg" alt="UNCC Club Hockey team logo">
+                    <p class="seasons">2025/26 &ndash; Present</p>
+                    <p>Team 5 of 5. I have played for the UNCC Club Hockey team ever since, and I am still playing today.</p>
+                </div>
+
+                <div class="slide-controls">
+                    <button type="button" id="slide-prev">&larr; Previous</button>
+                    <span id="slide-count" aria-live="polite">1 / 6</span>
+                    <button type="button" id="slide-next">Next &rarr;</button>
+                </div>
+
+            </div>
 
             <figure>
                 <img src="images/introductonp1.png"
@@ -606,57 +833,9 @@ footer a:focus {
         <section id="ai-prompts">
             <h2>AI Prompts</h2>
 
-            <p class="intro">
-                AI was used to help develop parts of this hobby website,
-                including planning, writing, and generating visual concepts.
-            </p>
-
-            <div class="content-grid">
-                <article class="card">
-                    <h3>Planning Prompt</h3>
-                    <p>
-                        "Help me create a multi-page-style hobby website about
-                        hockey that follows CRAP design principles."
-                    </p>
-                </article>
-
-                <article class="card">
-                    <h3>Writing Prompt</h3>
-                    <p>
-                        "Write short informational content explaining what
-                        hockey is, when it is played, where it can be enjoyed,
-                        and why someone might enjoy the sport."
-                    </p>
-                </article>
-
-                <article class="card">
-                    <h3>Image Prompt</h3>
-                    <p>
-                        "Create photorealistic hockey images with a consistent
-                        visual style for a personal hockey hobby website."
-                    </p>
-                </article>
-            </div>
-
-            <figure>
-                <img src="images/ai-hockey.jpg"
-                     alt="Stylized hockey scene representing artificial intelligence">
-                <figcaption>AI-assisted design and content creation.</figcaption>
-
-            </figure>
-                <p>
-                    <em>
-                        AI prompt used for this image: "Create a photorealistic
-                        hockey scene that represents the use of artificial
-                        intelligence in creating a personal hobby website."
-                    </em>
-                </p>
-
-            <p>
-                AI was used as a development and brainstorming tool. The final
-                website was reviewed and organized to meet the assignment
-                requirements.
-            </p>
+            <p>give me a 6 slide slideshow simple for the history of the hockey teams i have played for. for 2018/19 - 2020/2021 i played for the carolina stars.
+                 for  2021/22 i played for the raleigh raptors. for 2022/23-2023/24 i played for the NC Golden Bears. for 2024/25 i played for the Queen City Royals. And I have played for the UNCC Club hockey team ever since. 
+                here is source code of html I have so far. Only change things that incorporate into the slideshow.</p>
         </section>
 
     </main>
@@ -678,7 +857,37 @@ footer a:focus {
         </p>
     </footer>
 
+    <script>
+        (function () {
+            var show = document.getElementById("team-slideshow");
+            var slides = show.querySelectorAll(".slide");
+            var prev = document.getElementById("slide-prev");
+            var next = document.getElementById("slide-next");
+            var count = document.getElementById("slide-count");
+            var current = 0;
 
+            show.classList.add("js");
+
+            function go(n) {
+                current = Math.max(0, Math.min(slides.length - 1, n));
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].classList.toggle("active", i === current);
+                }
+                count.textContent = (current + 1) + " / " + slides.length;
+                prev.disabled = current === 0;
+                next.disabled = current === slides.length - 1;
+            }
+
+            prev.addEventListener("click", function () { go(current - 1); });
+            next.addEventListener("click", function () { go(current + 1); });
+            show.addEventListener("keydown", function (e) {
+                if (e.key === "ArrowRight") { go(current + 1); }
+                if (e.key === "ArrowLeft") { go(current - 1); }
+            });
+
+            go(0);
+        })();
+    </script>
 
 </body>
 </html>
