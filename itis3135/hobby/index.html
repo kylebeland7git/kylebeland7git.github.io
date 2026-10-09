@@ -11,263 +11,269 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 
     <style>
-        :root {
-            --sand: #bfb48f;
-            --taupe-grey: #564e58;
-            --burnt-rose: #904e55;
-            --parchment: #f2efe9;
-            --carbon-black: #252627;
-        }
+  :root {
+    --dark-amethyst: #320e3b;
+    --indigo-velvet: #4c2a85;
+    --glaucous: #6b7fd7;
+    --frosted-blue: #bcedf6;
+    --frosted-mint: #ddfbd2;
+}
 
-        * {
-            box-sizing: border-box;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        body {
-            margin: auto;
-            max-width: 1200px;
-            background-color: var(--sand);
-            color: var(--carbon-black);
-            font-family: "Segoe UI", Arial, sans-serif;
-            line-height: 1.6;
-        }
+body {
+    margin: auto;
+    max-width: 1200px;
+    background-color: var(--dark-amethyst);
+    color: var(--dark-amethyst);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+}
 
-        header {
-            background-color: var(--parchment);
-            padding: 25px;
-            text-align: center;
-            border-bottom: 6px solid var(--burnt-rose);
-        }
+header {
+    background-color: var(--frosted-blue);
+    padding: 25px;
+    text-align: center;
+    border-bottom: 6px solid var(--glaucous);
+}
 
-        h1 {
-            margin: 0 0 15px;
-            font-size: 2.7rem;
-            font-family: "Trebuchet MS", Arial, sans-serif;
-            color: var(--taupe-grey);
-        }
+h1 {
+    margin: 0 0 15px;
+    font-size: 2.7rem;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: var(--indigo-velvet);
+}
 
-        h1 a {
-            color: var(--taupe-grey);
-            text-decoration: none;
-        }
+h1 a {
+    color: var(--indigo-velvet);
+    text-decoration: none;
+}
 
-        h1 a:hover,
-        h1 a:focus {
-            color: var(--burnt-rose);
-            text-decoration: none;
-        }
+h1 a:hover,
+h1 a:focus {
+    color: var(--dark-amethyst);
+    text-decoration: none;
+}
 
-        h2 {
-            margin-top: 0;
-            font-size: 2rem;
-            border-bottom: 3px solid var(--burnt-rose);
-            padding-bottom: 8px;
-            font-family: "Trebuchet MS", Arial, sans-serif;
-            color: var(--taupe-grey);
-        }
+h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    border-bottom: 3px solid var(--glaucous);
+    padding-bottom: 8px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: var(--indigo-velvet);
+}
 
-        h3 {
-            font-size: 1.3rem;
-            font-family: "Trebuchet MS", Arial, sans-serif;
-            color: var(--taupe-grey);
-        }
+h3 {
+    font-size: 1.3rem;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: var(--indigo-velvet);
+}
 
-        nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
 
-        nav a {
-            background-color: var(--taupe-grey);
-            color: var(--parchment);
-            border: 2px solid var(--taupe-grey);
-            padding: 9px 14px;
-            font-family: "Trebuchet MS", Arial, sans-serif;
-            font-size: 1rem;
-            font-weight: bold;
-            text-decoration: none;
-        }
+nav a {
+    background-color: var(--indigo-velvet);
+    color: var(--frosted-blue);
+    border: 2px solid var(--indigo-velvet);
+    padding: 9px 14px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
 
-        nav a:hover,
-        nav a:focus {
-            background-color: var(--burnt-rose);
-            border-color: var(--burnt-rose);
-            color: var(--parchment);
-            text-decoration: none;
-        }
+nav a:hover,
+nav a:focus {
+    background-color: var(--dark-amethyst);
+    border-color: var(--dark-amethyst);
+    color: var(--frosted-blue);
+    text-decoration: none;
+}
 
-        main {
-            background-color: var(--parchment);
-            margin: 25px 0;
-            padding: 30px;
-            border-left: 6px solid var(--burnt-rose);
-            border-right: 6px solid var(--burnt-rose);
-        }
+main {
+    background-color: var(--frosted-blue);
+    margin: 25px 0;
+    padding: 30px;
+    border-left: 6px solid var(--glaucous);
+    border-right: 6px solid var(--glaucous);
+}
 
-        section {
-            display: none;
-        }
+section {
+    display: none;
+}
 
-        section:target {
-            display: block;
-        }
+section:target {
+    display: block;
+}
 
-        main > section:first-child {
-            display: block;
-        }
+main > section:first-child {
+    display: block;
+}
 
-        main:has(section:target) > section:first-child {
-            display: none;
-        }
+main:has(section:target) > section:first-child {
+    display: none;
+}
 
-        .intro {
-            font-size: 1.15rem;
-        }
+.intro {
+    font-size: 1.15rem;
+}
 
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-            margin-top: 25px;
-        }
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 25px;
+}
 
-        .card {
-            background-color: var(--sand);
-            padding: 20px;
-            border: 3px solid var(--taupe-grey);
-        }
+.card {
+    background-color: var(--frosted-mint);
+    padding: 20px;
+    border: 3px solid var(--indigo-velvet);
+}
 
-        .card h3 {
-            margin-top: 0;
-        }
+.card h3 {
+    margin-top: 0;
+}
 
-        figure {
-            margin: 25px 0;
-            padding: 15px;
-            background-color: var(--sand);
-            border: 3px solid var(--burnt-rose);
-            text-align: center;
-        }
+figure {
+    margin: 25px 0;
+    padding: 15px;
+    background-color: var(--frosted-mint);
+    border: 3px solid var(--glaucous);
+    text-align: center;
+}
 
-        figure img {
-            width: 100%;
-            max-width: 700px;
-            height: auto;
-            display: block;
-            margin: auto;
-        }
+figure img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
 
-        figcaption {
-            margin-top: 10px;
-            font-weight: bold;
-            color: var(--taupe-grey);
-        }
+figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--indigo-velvet);
+}
 
-        figure p {
-            margin-bottom: 0;
-            font-size: 0.95rem;
-        }
+figure p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
 
-        .facts {
-            padding-left: 25px;
-        }
+.facts {
+    padding-left: 25px;
+}
 
-        .facts li {
-            margin-bottom: 8px;
-        }
+.facts li {
+    margin-bottom: 8px;
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
 
-        th,
-        td {
-            border: 2px solid var(--taupe-grey);
-            padding: 10px;
-            text-align: left;
-        }
+th,
+td {
+    border: 2px solid var(--indigo-velvet);
+    padding: 10px;
+    text-align: left;
+}
 
-        th {
-            background-color: var(--taupe-grey);
-            color: var(--parchment);
-        }
+th {
+    background-color: var(--indigo-velvet);
+    color: var(--frosted-blue);
+}
 
-        td {
-            background-color: var(--sand);
-        }
+td {
+    background-color: var(--frosted-mint);
+}
 
-        a {
-            color: var(--burnt-rose);
-            font-weight: bold;
-            text-decoration: none;
-        }
+a {
+    color: var(--indigo-velvet);
+    font-weight: bold;
+    text-decoration: none;
+}
 
-        a:hover,
-        a:focus {
-            color: var(--taupe-grey);
-            text-decoration: underline;
-        }
+a:hover,
+a:focus {
+    color: var(--dark-amethyst);
+    text-decoration: underline;
+}
 
-        footer {
-            background-color: var(--taupe-grey);
-            color: var(--parchment);
-            padding: 25px;
-            text-align: center;
-            border-top: 6px solid var(--burnt-rose);
-        }
+footer {
+    background-color: var(--dark-amethyst);
+    color: var(--frosted-blue);
+    padding: 25px;
+    text-align: center;
+    border-top: 6px solid var(--glaucous);
+}
 
-        footer a {
-            color: var(--parchment);
-        }
+footer a {
+    color: var(--frosted-blue);
+}
 
-        footer a:hover,
-        footer a:focus {
-            color: var(--sand);
-        }
+footer a:hover,
+footer a:focus {
+    color: var(--frosted-mint);
+}
 
-        .footer-links {
-            margin-bottom: 15px;
-        }
+.footer-links {
+    margin-bottom: 15px;
+}
 
-        .footer-links span {
-            margin: 0 5px;
-        }
+.footer-links span {
+    margin: 0 5px;
+}
 
-        @media (max-width: 700px) {
-            body {
-                width: 95%;
-            }
+@media (max-width: 700px) {
+    body {
+        width: 95%;
+    }
 
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
 
-            header,
-            main,
-            footer {
-                padding: 20px;
-            }
+    header,
+    main,
+    footer {
+        padding: 20px;
+    }
 
-            h1 {
-                font-size: 2.1rem;
-            }
+    h1 {
+        font-size: 2.1rem;
+    }
 
-            nav {
-                flex-direction: column;
-            }
+    nav {
+        flex-direction: column;
+    }
 
-            nav a {
-                width: 100%;
-            }
+    nav a {
+        width: 100%;
+    }
 
-            figure img {
-                max-width: 100%;
-            }
-        }
+    figure img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    figure small-photo {
+    max-width: 35px;
+    }
+}
     </style>
 </head>
 
@@ -278,17 +284,17 @@
 
         <nav aria-label="Hockey hobby sections">
             <a href="#">What</a>
-            <span aria-hidden="true">◆</span>
+            <span aria-hidden="true">🧊</span>
             <a href="#who">Who</a>
-            <span aria-hidden="true">◆</span>
+            <span aria-hidden="true">🧊</span>
             <a href="#when">When</a>
-            <span aria-hidden="true">◆</span>
+            <span aria-hidden="true">🧊</span>
             <a href="#where">Where</a>
-            <span aria-hidden="true">◆</span>
+            <span aria-hidden="true">🧊</span>
             <a href="#how">How</a>
-            <span aria-hidden="true">◆</span>
+            <span aria-hidden="true">🧊</span>
             <a href="#why">Why</a>
-            <span aria-hidden="true">◆</span>
+            <span aria-hidden="true">🧊</span>
             <a href="#ai-prompts">AI Prompts</a>
         </nav>
     </header>
@@ -299,17 +305,52 @@
             <h2>What is Hockey?</h2>
 
             <p class="intro">
-                Hockey is a sport played with players skating on ice and a rubber puck is used as the ball. The objective is to score goals by shooting the puck into the opposing team's net.
+                Hockey is a sport played with players skating on ice. The objective is to score goals by shooting the puck into the opposing team's net.
                 The objective is to put the puck into the other team's net while preventing the opposing team from scoring.
             </p>
+
+
 
             <figure>
                 <img src="images/ai-hockey.png"
                      alt="Hockey players competing on an ice rink">
                 <figcaption>
-                    Hockey is a fast and team-oriented sport.<br>
+                    This depicts an AI picture of hockey players on a rink.<br>
+                    <em>The AI prompt used was: "Generate a realistic picture of hockey being played on a ice"</em>
                 </figcaption>
             </figure>
+
+            <h3>Hockey Positions and Roles</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Goalie</td>
+                        <td>Tries to keep the puck out of the net</td>
+                    </tr>
+                    <tr>
+                        <td>Defenseman</td>
+                        <td>Defends the zone and tries to find forwards who start offensive attacks</td>
+                    </tr>
+                    <tr>
+                        <td>Left Wing</td>
+                        <td>Plays offense on the left side of the ice</td>
+                    </tr>
+                    <tr>
+                        <td>Center</td>
+                        <td>Plays offense and defense through the center of the ice</td>
+                    </tr>
+                    <tr>
+                        <td>Right Wing</td>
+                        <td>Plays offense on the right side of the ice</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
 
@@ -322,9 +363,11 @@
 
             <figure>
                 <img src="images/introductonp1.png"
-                     alt="Hockey player preparing for a faceoff">
+                     alt="Hockey player preparing for a faceoff"
+                     class="small-photo">
                 <figcaption>
                     A picture of me representing the 49er's<br>
+                     <em>No AI prompt was used for this photo</em>
                 </figcaption>
             </figure>
         </section>
