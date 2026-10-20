@@ -6,6 +6,7 @@
     --vintage-grape: #453750;
     --onyx: #0c0910;
     --parchment: #f5f1f8;
+    /* White used for more readable text on purple background.*/
     --white: #ffffff;
 }
 
@@ -247,5 +248,18 @@ footer p {
 
     blockquote {
         padding: 12px;
+    }
+}
+
+h6 {
+    margin: 10px 0;
+    color: var(--white);
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 700px) {
+    h6 {
+        font-size: clamp(0.85rem, 3.5vw, 1.3rem);
     }
 }
