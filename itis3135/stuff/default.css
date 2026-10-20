@@ -1,5 +1,6 @@
 body {
     background-color: white;
+    color: black;
 }
 
 header {
@@ -8,10 +9,12 @@ header {
 
 main {
     background-color: white;
+    color: black;
 }
 
 h1 {
     color: black;
+    font-size: 100px;
 }
 
 h2 {
@@ -28,7 +31,7 @@ p {
 
 .large {
     color: black;
-    font-size: 50px;
+    font-size: 100px;
 }
 
 ul {
@@ -47,6 +50,6 @@ footer {
 }
 
 img {
-    width: 300px;
+    width: 400px;
     height: 400px;
 }
