@@ -1,22 +1,188 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Kyle Beland's | Killa Bees Hockey Co. | ITIS3135 | Inventory</title>
 
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/default.css">
 
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+    <style>
+        .inventory-intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .inventory-summary {
+            text-align: center;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .summary-card {
+            background-color: #320e3b;
+            color: #ffffff;
+            padding: 22px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .summary-card h3 {
+            margin-top: 0;
+        }
+
+        .summary-number {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .inventory-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: #ffffff;
+        }
+
+        .inventory-table th,
+        .inventory-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .inventory-table th {
+            background-color: #4c2a85;
+            color: #ffffff;
+        }
+
+        .inventory-table tr:nth-child(even) {
+            background-color: #f3eff8;
+        }
+
+        .stock-status {
+            font-weight: bold;
+        }
+
+        .in-stock {
+            color: #237a43;
+        }
+
+        .low-stock {
+            color: #b36b00;
+        }
+
+        .out-of-stock {
+            color: #b22222;
+        }
+
+        .inventory-note {
+            text-align: center;
+            margin: 25px 0;
+            font-style: italic;
+        }
+
+        @media screen and (max-width: 650px) {
+            .inventory-table th,
+            .inventory-table td {
+                padding: 9px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div data-include="components/header.html"></div>
 
     <main>
         <h2>Killa Bees Equipment Inventory</h2>
+
+        <section class="inventory-intro">
+            <h3>Official Killa Bees Hockey Co. Stockroom</h3>
+        </section>
+
+        <section class="inventory-summary">
+            <div class="summary-card">
+                <p>Total Products</p>
+                <p class="summary-number">6</p>
+            </div>
+
+            <div class="summary-card">
+                <p>Total Items</p>
+                <p class="summary-number">250</p>
+            </div>
+
+            <div class="summary-card">
+                <p>Product Categories</p>
+                <p class="summary-number">6</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Current Product Inventory</h3>
+
+            <table class="inventory-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Stock Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Killa Bees Hockey Puck</td>
+                        <td>Equipment</td>
+                        <td>75</td>
+                        <td class="stock-status in-stock">In Stock</td>
+                    </tr>
+
+                    <tr>
+                        <td>Killa Bees Shirt</td>
+                        <td>Apparel</td>
+                        <td>50</td>
+                        <td class="stock-status in-stock">In Stock</td>
+                    </tr>
+
+                    <tr>
+                        <td>Killa Bees Hat</td>
+                        <td>Accessories</td>
+                        <td>40</td>
+                        <td class="stock-status in-stock">In Stock</td>
+                    </tr>
+
+                    <tr>
+                        <td>Killa Bees Hoodie</td>
+                        <td>Apparel</td>
+                        <td>15</td>
+                        <td class="stock-status in-stock">InStock</td>
+                    </tr>
+
+                    <tr>
+                        <td>UNCC Hockey Collaboration Shirt</td>
+                        <td>Collaboration</td>
+                        <td>45</td>
+                        <td class="stock-status in-stock">In Stock</td>
+                    </tr>
+
+                    <tr>
+                        <td>UNCC Hockey Collaboration Hoodie</td>
+                        <td>Collaboration</td>
+                        <td>25</td>
+                        <td class="stock-status in-stock">In Stock</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 
     <div data-include="components/footer.html"></div>
@@ -25,3 +191,4 @@
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>
+

@@ -69,7 +69,6 @@ nav {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
     padding: 10px;
 }
 
@@ -179,10 +178,6 @@ footer {
     text-align: center;
 }
 
-footer nav {
-    gap: 5px;
-}
-
 footer a {
     color: var(--white);
 }
@@ -223,7 +218,6 @@ footer p {
 
     nav {
         flex-direction: column;
-        gap: 5px;
     }
 
     nav a {
@@ -258,3 +252,107 @@ h6 {
     white-space: nowrap;
 }
 
+.cards-intro {
+    text-align: center;
+    margin: 15px auto 35px;
+    max-width: 650px;
+}
+
+.trading-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1050px;
+    margin: 30px auto;
+}
+
+.trading-card {
+    position: relative;
+    background: #f4eee2;
+    border: 3px solid #320e3b;
+    border-radius: 14px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.trading-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.3);
+}
+
+.trading-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    padding: 12px;
+    background: #e8e2d6;
+}
+
+.card-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #320e3b;
+    color: #ffffff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.card-info {
+    padding: 18px;
+}
+
+.card-info h3 {
+    color: #320e3b;
+    margin: 5px 0 12px;
+}
+
+.card-info p {
+    line-height: 1.6;
+    min-height: 75px;
+}
+
+.card-type {
+    display: inline-block;
+    color: #ffffff;
+    background: #4c2a85;
+    padding: 7px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.legendary-card {
+    border: 3px solid #b58b36;
+    background: #f8f0d9;
+}
+
+.legendary-label {
+    position: absolute;
+    top: 45px;
+    left: 10px;
+    background: #b58b36;
+    color: #ffffff;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+@media screen and (max-width: 800px) {
+    .trading-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .trading-card-grid {
+        grid-template-columns: 1fr;
+    }
+}
