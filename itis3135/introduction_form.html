@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle Beland's | Killer Bees | ITIS3135 | Introduction Form</title>
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/default.css">
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Introduction Form</h2>
+
+        <h3>Please Submit The Form Below.</h3>
+
+        <form id="form">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName"
+                placeholder="Enter first name" value="Kyle" required>
+
+            <label for="middleName">Middle Name:</label>
+            <input type="text" id="middleName" name="middleName"
+                placeholder="Enter middle name">
+
+            <label for="nickname">Nickname:</label>
+            <input type="text" id="nickname" name="nickname"
+                placeholder="Enter nickname">
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName"
+                placeholder="Enter last name" value="Beland" required>
+
+            <label for="acknowledgment">Acknowledgment Statement:</label>
+            <textarea id="acknowledgment" name="acknowledgment" required> I understand that this is a public document and that I am responsible for the information I share.</textarea>
+
+            <label for="acknowledgmentDate">Acknowledgment Date:</label>
+            <input type="date" id="acknowledgmentDate"
+                name="acknowledgmentDate" required>
+
+            <label for="adjectives">Mascot Adjective:</label>
+            <input type="text" id="adjectives" name="adjectives"
+                placeholder="Enter adjective" value="Killer" required>
+
+            <label for="animal">Mascot Animal:</label>
+            <input type="text" id="animal" name="animal"
+                placeholder="Enter animal" value="Bees" required>
+
+            <label for="divider">Name Divider:</label>
+            <input type="text" id="divider" name="divider"
+                placeholder="Example: |" value="|" required>
+
+            <label for="picture">Picture:</label>
+            <input type="text" id="picture" name="picture"
+                value="images/kyle-beland-portrait.jpg" required>
+
+            <label for="pictureUpload">Upload Your Own Picture:</label>
+            <input type="file" id="pictureUpload" name="pictureUpload"
+                accept="image/*">
+
+            <label for="pictureAlt">Picture Description:</label>
+            <input type="text" id="pictureAlt" name="pictureAlt"
+                placeholder="Describe your picture" value="Kyle Beland">
+
+            <label for="caption">Picture Caption:</label>
+            <input type="text" id="caption" name="caption"
+                placeholder="Enter picture caption">
+
+            <label for="personalStatement">Personal Statement:</label>
+            <textarea id="personalStatement" name="personalStatement"
+                required>My name is Kyle Beland, and I am studying Information Technology at UNC Charlotte. I enjoy playing hockey and spending time with my girlfriend. I am interested in pursuing a technology career in biopharma after college.</textarea>
+
+            <h3>Personal Background</h3>
+
+            <label for="personalBackground">Personal Background:</label>
+            <textarea id="personalBackground" name="personalBackground"
+                placeholder="Enter personal background" required></textarea>
+
+            <label for="professionalBackground">Professional Background:</label>
+            <textarea id="professionalBackground" name="professionalBackground"
+                placeholder="Enter professional background" required></textarea>
+
+            <label for="academicBackground">Academic Background:</label>
+            <textarea id="academicBackground" name="academicBackground"
+                placeholder="Enter academic background" required></textarea>
+
+            <label for="primaryWorkComputer">Primary Work Computer:</label>
+            <textarea id="primaryWorkComputer" name="primaryWorkComputer"
+                placeholder="Describe your computer" required></textarea>
+
+            <label for="primaryWorkLocation">Primary Work Location:</label>
+            <textarea id="primaryWorkLocation" name="primaryWorkLocation"
+                placeholder="Enter work location" required></textarea>
+
+            <label for="alternateComputerLocation">Alternate Computer Location:</label>
+            <textarea id="alternateComputerLocation"
+                name="alternateComputerLocation"
+                placeholder="Enter alternate location" required></textarea>
+
+            <h3>Courses</h3>
+
+            <div id="courses">
+                <div class="course">
+                    <label>Department:</label>
+                    <input type="text" name="department[]" placeholder="ITIS">
+
+                    <label>Course Number:</label>
+                    <input type="text" name="courseNumber[]" placeholder="3135">
+
+                    <label>Course Name:</label>
+                    <input type="text" name="courseTitle[]" placeholder="Course name">
+
+                    <label>Reason:</label>
+                    <textarea name="reason[]" placeholder="Reason for taking course"></textarea>
+                </div>
+            </div>
+
+            <button type="button" id="addCourse">Add Course</button>
+
+            <label for="quote">Favorite Quote:</label>
+            <textarea id="quote" name="quote" placeholder="Enter favorite quote" required></textarea>
+
+            <label for="quoteAuthor">Quote Author:</label>
+            <input type="text" id="quoteAuthor" name="quoteAuthor"
+                placeholder="Enter quote author" required>
+
+            <label for="funnyItem">Funny Thing:</label>
+            <textarea id="funnyItem" name="funnyItem"
+                placeholder="Enter something funny"></textarea>
+
+            <label for="somethingToShare">Something I Would Like to Share:</label>
+            <textarea id="somethingToShare" name="somethingToShare"
+                placeholder="Enter something to share"></textarea>
+
+            <h3>Links</h3>
+
+            <label for="webspace">Webspace:</label>
+            <input type="url" id="webspace" name="webspace"
+                value="https://webpages.charlotte.edu/">
+
+            <label for="github">GitHub:</label>
+            <input type="url" id="github" name="github"
+                value="https://github.com/kylebeland7git">
+
+            <label for="githubPages">GitHub Pages:</label>
+            <input type="url" id="githubPages" name="githubPages"
+                value="https://kylebeland7git.github.io/">
+
+            <label for="freecodecamp">freeCodeCamp:</label>
+            <input type="url" id="freecodecamp" name="freecodecamp"
+                value="https://www.freecodecamp.org/kylebelandkillerbee">
+
+            <label for="linkedin">LinkedIn:</label>
+            <input type="url" id="linkedin" name="linkedin"
+                value="https://www.linkedin.com/in/kyle-beland-320b92333/">
+
+            <div class="form-buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="button" id="clearForm">Clear</button>
+            </div>
+        </form>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/introduction.js"></script>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+</body>
+</html>
