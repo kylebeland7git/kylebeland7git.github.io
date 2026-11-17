@@ -6,7 +6,7 @@
     --vintage-grape: #453750;
     --onyx: #0c0910;
     --parchment: #f5f1f8;
-    /* White used for more readable text on purple background.*/
+    /* White is used for readable text against dark purple backgrounds. */
     --white: #ffffff;
 }
 
@@ -203,6 +203,13 @@ footer p {
     text-align: left;
 }
 
+.introduction h6 {
+    font-size: 2.5rem;
+    text-align: center;
+    white-space: nowrap;
+    margin: 15px 0;
+}
+
 @media screen and (max-width: 700px) {
     body {
         width: 100%;
@@ -294,7 +301,8 @@ h6 {
     top: 10px;
     left: 10px;
     background: #320e3b;
-    color: #ffffff;
+    /* White provides readable contrast against the dark purple background. */
+    color: var(--white);
     padding: 6px 10px;
     border-radius: 5px;
     font-size: 0.8rem;
@@ -318,7 +326,8 @@ h6 {
 
 .card-type {
     display: inline-block;
-    color: #ffffff;
+    /* White text contrasts with the purple label background. */
+    color: var(--white);
     background: #4c2a85;
     padding: 7px 12px;
     border-radius: 4px;
@@ -337,7 +346,8 @@ h6 {
     top: 45px;
     left: 10px;
     background: #b58b36;
-    color: #ffffff;
+    /* White text improves readability against the gold background. */
+    color: var(--white);
     padding: 6px 10px;
     font-size: 0.75rem;
     font-weight: bold;
